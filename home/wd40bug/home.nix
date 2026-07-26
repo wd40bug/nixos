@@ -28,6 +28,7 @@ in
     charm-freeze
     luarocks
     luajit
+    taplo
   ];
 
   home.file = {
