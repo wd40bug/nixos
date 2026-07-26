@@ -25,4 +25,10 @@
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  users.users.wd40bug = {
+    isNormalUser = true;
+    description = "My main user account";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
 }
