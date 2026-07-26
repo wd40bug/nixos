@@ -8,8 +8,8 @@ basic_conf = name : {
 };
 in
 {
-  home.username = "nixos";
-  home.homeDirectory = "/home/nixos";
+  home.username = "wd40bug";
+  home.homeDirectory = "/home/wd40bug";
 
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
