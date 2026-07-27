@@ -1,0 +1,6 @@
+require('opts')
+require('plug')
+require('theme')
+require('treesitter')
+require('keys')
+require('lsp.lsp')

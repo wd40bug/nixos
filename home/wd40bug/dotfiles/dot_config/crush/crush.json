@@ -1,0 +1,32 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "providers": {
+    "ollama": {
+      "type": "openai",
+      "base_url": "http://localhost:11434/v1/",
+      "name": "Ollama",
+      "models": [
+        {
+          "id": "qwen2.5-coder:7b",
+          "name": "Qwen2.5",
+          "context_window": 8192,
+          "default_max_tokens": 2048,
+          "cost_per_1m_in": 0,
+          "cost_per_1m_out": 0
+        },
+        {
+          "id": "gemma4:latest",
+          "name": "Gemma 4"
+        },
+        {
+          "id": "codellama:latest",
+          "name": "Codellama"
+        },
+        {
+          "id": "llama3.2:latest",
+          "name": "Llama 3.2"
+        }
+      ]
+    }
+  }
+}

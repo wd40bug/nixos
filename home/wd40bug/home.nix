@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-dotfilesConfig = "${config.home.homeDirectory}/dotfiles/dot_config";
+dotfilesConfig = ./dotfiles/dot_config/;
 symlink = config.lib.file.mkOutOfStoreSymlink;
 basic_conf = name : {
   source = symlink "${dotfilesConfig}/${name}";
