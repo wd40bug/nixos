@@ -19,7 +19,7 @@
     just
   ];
 
-  system.activationScripts.set-path-ownership.text = "chown -R wd40bug /etc/nixos/.git"
+  system.activationScripts.set-path-ownership.text = "chown -R wd40bug /etc/nixos/.git";
 
   programs.neovim = {
     enable = true;
