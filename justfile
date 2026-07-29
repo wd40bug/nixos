@@ -10,8 +10,10 @@ switch-build: commit
 
 commit:
   git add .
-  git commit -m "generation {{gen}}"
+  git commit -m "generation $(({{gen}} + 1))"
 
 get-gen:
   @echo "generation {{gen}}"
 
+next-gen:
+  echo "generation $(({{gen}} + 1))"
