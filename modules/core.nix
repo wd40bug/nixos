@@ -16,6 +16,7 @@
     neovim
     curl
     wget
+    just
   ];
 
   programs.neovim = {
