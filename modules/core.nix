@@ -19,6 +19,8 @@
     just
   ];
 
+  environment.etc.nixos.".git".user = "wd40bug"
+
   programs.neovim = {
     enable = true;
     defaultEditor = true;
