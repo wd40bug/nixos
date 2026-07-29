@@ -19,7 +19,7 @@
     just
   ];
 
-  environment.etc.nixos.".git".user = "wd40bug";
+  system.activationScripts.set-path-ownership.text = "chown -R wd40bug /etc/nixos/.git"
 
   programs.neovim = {
     enable = true;
