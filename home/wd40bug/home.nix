@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, osConfig, ... }:
 let
 dotfilesConfig = "/etc/nixos/home/wd40bug/dotfiles/dot_config";
 symlink = config.lib.file.mkOutOfStoreSymlink;
@@ -29,7 +29,7 @@ in
     luarocks
     luajit
     taplo
-  ];
+  ] ++ lib.optionals osConfig.hostConfig.GUI [kitty];
 
   home.file = {
     "dotfiles/dot_config/nvim/lua/system.lua" = {
