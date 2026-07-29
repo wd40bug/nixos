@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let
-dotfilesConfig = ./dotfiles/dot_config/;
+dotfilesConfig = "/etc/nixos/home/wd40bug/dotfiles/dot_config";
 symlink = config.lib.file.mkOutOfStoreSymlink;
 basic_conf = name : {
   source = symlink "${dotfilesConfig}/${name}";

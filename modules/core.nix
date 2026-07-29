@@ -13,7 +13,6 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
   environment.systemPackages = with pkgs; [
-    git
     neovim
     curl
     wget
@@ -22,6 +21,15 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+  };
+
+  programs.git = {
+    enable = true;
+    config = {
+      safe.directory = [
+        "/etc/nixos"
+      ];
+    };
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
