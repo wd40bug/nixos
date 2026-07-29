@@ -19,7 +19,7 @@
     just
   ];
 
-  environment.etc.nixos.".git".user = "wd40bug"
+  environment.etc.nixos.".git".user = "wd40bug";
 
   programs.neovim = {
     enable = true;
