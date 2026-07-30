@@ -18,7 +18,6 @@
     wget
     just
     secretspec
-    bws
     bitwarden-cli
     git-crypt
   ];
