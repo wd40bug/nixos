@@ -38,20 +38,33 @@ in
     extraConfig = ''
       # Force Kitty's built-in Nerd Font for symbols, bypassing DejaVu
       symbol_map U+e000-U+e00a,U+e0a0-U+e0a2,U+e0a3,U+e0b0-U+e0b3,U+e0b4-U+e0c8,U+e0ca,U+e0cc-U+e0d7,U+e200-U+e2a9,U+e300-U+e3e3,U+e5fa-U+e6b7,U+e700-U+e8ef,U+ea60-U+ec1e,U+ed00-U+efce,U+f000-U+f2ff,U+f300-U+f381,U+f400-U+f533,U+f0001-U+f1af0 Symbols Nerd Font Mono
+
+      placement_strategy top-left
+      editor nvim
+      shell fish
+      hide_window_decorations yes
+      map ctrl+shift+d launch --cwd=current --type=tab
+      map ctrl+shift+enter new_window_with_cwd 
+      enabled_layouts tall, horizontal
+      map ctrl+shift+tab focus_visible_window
+      map ctrl+shift+left neighboring_window left
+      map ctrl+shift+right neighboring_window right
+      map ctrl+shift+up neighboring_window top
+      map ctrl+shift+down neighboring_window bottom
+
+      map ctrl+alt+right next_tab
+      map ctrl+alt+left previous_tab
+      # BEGIN_KITTY_FONTS
+      font_family      family="JetBrains Mono"
+      bold_font        auto
+      italic_font      auto
+      bold_italic_font auto
+      # END_KITTY_FONTS
     '';
   };
 
   programs.firefox = {
     enable = osConfig.hostConfig.GUI;
-  };
-
-  home.file = {
-    "dotfiles/dot_config/nvim/lua/system.lua" = {
-      text = ''
-        Os = "linux";
-	System = "nixos";
-      '';
-    };
   };
 
   xdg.configFile = {
@@ -65,7 +78,6 @@ in
     "crush" = basic_conf "crush";
     "helix" = basic_conf "helix";
     "jj" = basic_conf "jj";
-    "kitty" = if osConfig.hostConfig.GUI then basic_conf "kitty" else null;
   };
 
   home.sessionVariables = {
