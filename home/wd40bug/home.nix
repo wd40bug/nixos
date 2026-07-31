@@ -29,6 +29,7 @@ in
     luarocks
     luajit
     taplo
+    jetbrains-mono
   ] ++ lib.optionals osConfig.hostConfig.GUI [kitty];
 
   programs.firefox = {
