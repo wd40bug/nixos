@@ -56,6 +56,7 @@ in
     "crush" = basic_conf "crush";
     "helix" = basic_conf "helix";
     "jj" = basic_conf "jj";
+    "kitty" = basic_conf if osConfig.hostConfig.GUI then basic_conf "kitty" else null;
   };
 
   home.sessionVariables = {
