@@ -33,7 +33,7 @@ in
   ] ++ lib.optionals osConfig.hostConfig.GUI [bitwarden-desktop];
 
   programs.kitty = {
-    enable = osCOnfig.hostConfig.GUI;
+    enable = osConfig.hostConfig.GUI;
     # Your existing settings...
     extraConfig = ''
       # Force Kitty's built-in Nerd Font for symbols, bypassing DejaVu
