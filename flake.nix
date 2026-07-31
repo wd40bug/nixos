@@ -29,6 +29,18 @@
           ./hosts/madrid
         ];
       };
+      seville = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.wd40bug = ./home/wd40bug/home.nix;
+          }
+          ./modules/core.nix
+          ./hosts/seville
+        ];
+      };
     };
   };
 }
