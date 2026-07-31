@@ -112,7 +112,7 @@ in
       accent-color = "blue";
     };
     "org/gnome/desktop/input-sources" = {
-      xkb-options = [ "ctrl:nocaps" ];
+      xkb-options = [ "caps:escape" ];
     };
   }; 
 
