@@ -30,7 +30,7 @@ in
     luajit
     taplo
     jetbrains-mono
-  ] ++ lib.optionals osConfig.hostConfig.GUI [bitwarden-desktop];
+  ] ++ lib.optionals osConfig.hostConfig.GUI [discord];
 
   programs.kitty = {
     enable = osConfig.hostConfig.GUI;
