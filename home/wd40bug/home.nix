@@ -31,6 +31,10 @@ in
     taplo
   ] ++ lib.optionals osConfig.hostConfig.GUI [kitty];
 
+  programs.firefox = {
+    enable = osConfig.hostConfig.GUI;
+  };
+
   home.file = {
     "dotfiles/dot_config/nvim/lua/system.lua" = {
       text = ''
@@ -75,4 +79,18 @@ in
       };
     };
   };
+
+  programs.dconf.profiles.user.databases = [
+    {
+      lockAll = true; # prevents overriding
+      settings = {
+        "org/gnome/desktop/interface" = {
+          accent-color = "blue";
+        };
+        "org/gnome/desktop/input-sources" = {
+          xkb-options = [ "ctrl:nocaps" ];
+        };
+      };
+    }
+  ];
 }
