@@ -33,7 +33,7 @@ in
     luajit
     taplo
     jetbrains-mono
-  ] ++ import ./neovim.nix pkgs {} ++ lib.optionals osConfig.hostConfig.GUI [discord];
+  ] ++ lib.optionals osConfig.hostConfig.GUI [discord];
 
   programs.kitty = {
     enable = osConfig.hostConfig.GUI;
