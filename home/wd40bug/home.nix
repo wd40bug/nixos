@@ -110,6 +110,7 @@ in
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       accent-color = "blue";
+      color-scheme = "prefer-dark";
     };
     "org/gnome/desktop/input-sources" = {
       xkb-options = [ "caps:escape" ];
