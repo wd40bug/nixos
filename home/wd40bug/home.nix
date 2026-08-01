@@ -124,7 +124,7 @@ in
         name = "Open Kitty";
       };
       "org/gtk/settings/file-chooser/" = {
-        clock-format = "12h"
+        clock-format = "12h";
       };
       # "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings" = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
     }; 
