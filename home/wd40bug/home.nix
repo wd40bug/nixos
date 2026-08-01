@@ -106,20 +106,22 @@ in
     };
   };
 
-  dconf.enable = true;
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      accent-color = "blue";
-      color-scheme = "prefer-dark";
-    };
-    "org/gnome/desktop/input-sources" = {
-      xkb-options = [ "caps:escape" ];
-    };
-    "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings/custom0" = {
-      binding = "<Super>t";
-      command = "kitty";
-      name = "Open Kitty";
-    };
-    # "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings" = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
-  }; 
+  dconf = {
+    enable = "gnome" == osConfig.hostConfig.desktop;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        accent-color = "blue";
+        color-scheme = "prefer-dark";
+      };
+      "org/gnome/desktop/input-sources" = {
+        xkb-options = [ "caps:escape" ];
+      };
+      "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings/custom0" = {
+        binding = "<Super>t";
+        command = "kitty";
+        name = "Open Kitty";
+      };
+      # "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings" = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
+    }; 
+  };
 }

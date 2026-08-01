@@ -12,6 +12,7 @@
     hostConfig = {
       GUI = true;
       hostName = "Seville";
+      desktop = "gnome";
     };
     networking.hostName = "seville";
     boot.loader.systemd-boot.enable = true;
