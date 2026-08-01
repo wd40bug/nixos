@@ -115,6 +115,11 @@ in
     "org/gnome/desktop/input-sources" = {
       xkb-options = [ "caps:escape" ];
     };
+    "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings/custom0" = {
+      binding = "<Super>t";
+      command = "kitty";
+      name = "Open Kitty";
+    };
+    "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings" = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
   }; 
-
 }
