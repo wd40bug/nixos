@@ -4,5 +4,32 @@
     lua-language-server
     tree-sitter
     clang-tools
+    file
+    yaml-parser
+    sqlite3
+    jq
+    ruff
+    xmlformat
+    gdb
+    osascript
+    xclip
+    gclip
+    open
+    lua5_1
+    jsregexp
+    rustup
+    rust-analyzer
+    fd
+    fish-lsp
+    nix-lsp
+    nil
+    gopls
+    html-languageserver
+    jsonls
+    kotlin-language-server
+    powershell_es
+    pyright
+    typescript-language-server
+    verible
   ];
 }
