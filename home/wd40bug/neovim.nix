@@ -4,5 +4,5 @@
     lua-language-server
     tree-sitter
     clang-tools
-  ]
+  ];
 }

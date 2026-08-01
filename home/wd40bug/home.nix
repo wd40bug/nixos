@@ -8,6 +8,9 @@ basic_conf = name : {
 };
 in
 {
+  imports = [
+    neovim.nix
+  ];
   home.username = "wd40bug";
   home.homeDirectory = "/home/wd40bug";
 
