@@ -14,18 +14,19 @@
       hostName = "Seville";
     };
     networking.hostName = "seville";
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
 
-  services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+    services.xserver.enable = true;
+    services.displayManager.gdm.enable = true;
+    services.desktopManager.gnome.enable = true;
 
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs epiphany ];
 
+    services.xserver.xkb = {
+      layout = "us";
+      variant = "";
+    };
   };
 
 
