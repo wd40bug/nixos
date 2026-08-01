@@ -5,7 +5,6 @@
     tree-sitter
     clang-tools
     file
-    yaml-parser
     sqlite3
     jq
     ruff
