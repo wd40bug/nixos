@@ -30,7 +30,6 @@ in
     go
     charm-freeze
     luarocks
-    luajit
     taplo
     jetbrains-mono
   ] ++ lib.optionals osConfig.hostConfig.GUI [discord];
