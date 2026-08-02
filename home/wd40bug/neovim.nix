@@ -13,7 +13,6 @@
     xclip
     lua5_1
     rustup
-    rust-analyzer
     fd
     fish-lsp
     nil
