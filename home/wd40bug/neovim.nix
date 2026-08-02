@@ -18,10 +18,7 @@
     fish-lsp
     nil
     gopls
-    html-languageserver
-    jsonls
     kotlin-language-server
-    powershell_es
     pyright
     typescript-language-server
     verible
