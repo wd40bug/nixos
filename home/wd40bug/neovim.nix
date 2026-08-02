@@ -5,7 +5,7 @@
     tree-sitter
     clang-tools
     file
-    sqlite3
+    sqlite
     jq
     ruff
     xmlformat
