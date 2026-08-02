@@ -16,7 +16,6 @@
     rust-analyzer
     fd
     fish-lsp
-    nix-lsp
     nil
     gopls
     html-languageserver
