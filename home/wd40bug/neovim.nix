@@ -10,7 +10,6 @@
     ruff
     xmlformat
     gdb
-    osascript
     xclip
     gclip
     open
