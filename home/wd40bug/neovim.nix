@@ -12,7 +12,6 @@
     gdb
     xclip
     lua5_1
-    jsregexp
     rustup
     rust-analyzer
     fd
