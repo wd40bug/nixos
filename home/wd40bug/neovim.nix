@@ -11,7 +11,6 @@
     xmlformat
     gdb
     xclip
-    gclip
     open
     lua5_1
     jsregexp
