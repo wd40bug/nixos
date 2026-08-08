@@ -20,6 +20,8 @@
     secretspec
     bitwarden-cli
     git-crypt
+    gcc
+    clang
   ];
 
   system.activationScripts.set-path-ownership.text = "chown -R wd40bug /etc/nixos/.git";

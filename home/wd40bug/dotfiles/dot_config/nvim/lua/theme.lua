@@ -23,6 +23,10 @@ require('lualine').setup {
       'fileformat',
       'filetype',
     },
+    lualine_z = {
+      'lsp',
+      'location'
+    }
   },
 }
 
