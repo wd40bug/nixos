@@ -36,6 +36,8 @@
       layout = "us";
       variant = "";
     };
+
+    services.xserver.excludePackages = [ pkgs.xterm ];
   };
 
 
