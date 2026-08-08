@@ -27,7 +27,17 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    package = pkgs.neovim-unwrapped;
+
+    package = pkgs.neovim-unwrapped; # Forces the helper to use the raw binary
+    
+    # Disable all helper-managed configurations and wrappers
+    configure = {
+      customRC = "";
+      packages.myVimPackage = {
+        start = [];
+        opt = [];
+      };
+    };
   };
 
   programs.git = {
