@@ -24,7 +24,7 @@ require('lualine').setup {
       'filetype',
     },
     lualine_z = {
-      'lsp',
+      'lsp_status',
       'location'
     }
   },

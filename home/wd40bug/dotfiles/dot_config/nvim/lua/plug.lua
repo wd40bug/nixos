@@ -134,10 +134,10 @@ lazy.setup({
       shade_terminals = true,
       shading_factor = System == 'termux' and 1 or nil,
       shell = function()
-        if System == "windows" then
-          return "pwsh"
+        if System == 'windows' then
+          return 'pwsh'
         else
-          return "fish"
+          return 'fish'
         end
       end,
       close_on_exit = false
@@ -265,7 +265,7 @@ lazy.setup({
     'xvzc/chezmoi.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
-      require("chezmoi").setup {
+      require('chezmoi').setup {
         -- your configurations
       }
     end
@@ -324,7 +324,7 @@ lazy.setup({
       'nvim-lua/plenary.nvim',
     },
   },
-  { 'henry-hsieh/riscv-asm-vim',                  ft = { 'riscv_asm' } },
+  { 'henry-hsieh/riscv-asm-vim',       ft = { 'riscv_asm' } },
   {
     'mfussenegger/nvim-jdtls',
     dependencies = {
@@ -425,19 +425,22 @@ lazy.setup({
 
   --  TreeSitter : --------------------------------------------------------------------- (section)  --
 
-  { 'nvim-treesitter/nvim-treesitter', branch=System == 'fedora-work' and 'master' or 'main', opts={} }, -- Parses code as AST
-  { 'nvim-treesitter/nvim-treesitter-textobjects', opts={
+  { 'nvim-treesitter/nvim-treesitter', branch = System == 'fedora-work' and 'master' or 'main', opts = {} }, -- Parses code as AST
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    opts = {
       select = {
         enable = true,
         lookahead = true,
         keymaps = {
-          ["ap"] = "@parameter.outer",
-          ["ip"] = "@parameter.inner",
+          ['ap'] = '@parameter.outer',
+          ['ip'] = '@parameter.inner',
           -- ... your other keymaps
         },
       },
       -- ... move, swap, etc.
-    } },
+    }
+  },
   --  (section) --------------------------------------------------------------------- : TreeSitter  --
 
 
@@ -499,7 +502,7 @@ lazy.setup({
     dependencies = { 'mfussenegger/nvim-dap', 'nvim-neotest/nvim-nio' }
   },
   { 'theHamsta/nvim-dap-virtual-text' },
-  {'mfussenegger/nvim-dap-python'}
+  { 'mfussenegger/nvim-dap-python' }
 
   --  (section) ---------------------------------------------------------------------- : Debugging  --
 
@@ -515,7 +518,7 @@ Hints.setup({
 vim.g.undotree_DiffCommand = 'FC'
 
 require('dapui').setup()
-require('dap-python').setup("python3")
+require('dap-python').setup('python3')
 Dap = require('dap')
 Dap.set_log_level('TRACE')
 

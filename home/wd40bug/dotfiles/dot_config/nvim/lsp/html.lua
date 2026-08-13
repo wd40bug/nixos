@@ -1,5 +1,4 @@
-vim.lsp.config('html',{
-  capabilities = Lsp_capabilities,
+return {
   cmd = { 'html-languageserver', '--stdio' },
   init_options = {
     configurationSection = { 'html', 'css', 'javascript' },
@@ -9,6 +8,4 @@ vim.lsp.config('html',{
     },
   },
   settings = {}
-})
-
-vim.lsp.enable('html')
+}

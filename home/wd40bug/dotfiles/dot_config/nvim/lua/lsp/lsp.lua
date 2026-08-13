@@ -230,24 +230,34 @@ vim.api.nvim_create_user_command('LspRestart', function()
 
   print('LSP Restarted')
 end, {})
+
 -- LSP setups
 require('lsp.rust')
 require('lsp.lua')
-require('lsp.python')
 require('lsp.c')
-require('lsp.csharp')
-require('lsp.html')
-require('lsp.typescript')
-require('lsp.fish')
-require('lsp.java') -- using nvim-jdtls
-require('lsp.svelte')
-require('lsp.arduino')
-require('lsp.kotlin')
 require('lsp.dart')
-require('lsp.asm')
-require('lsp.verilog')
-require('lsp.csharp')
-require('lsp.json')
-require('lsp.go')
-require('lsp.powershell')
-require('lsp.toml')
+
+vim.lsp.config('*', {
+  capabilities = Lsp_capabilities
+})
+
+local lsp_configs = {}
+
+for _, f in pairs(vim.api.nvim_get_runtime_file('lsp/*.lua', true)) do
+  local server_name = vim.fn.fnamemodify(f, ':t:r')
+  table.insert(lsp_configs, server_name)
+end
+
+vim.lsp.enable(lsp_configs)
+
+vim.lsp.enable({
+  "c3lsp",
+  "csharp_ls",
+  "gopls",
+  "jsonls",
+  "kotlin_language_server",
+  "powershell_es",
+  "svelte",
+  "taplo",
+  "nixd"
+})
