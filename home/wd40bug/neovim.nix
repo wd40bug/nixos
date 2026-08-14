@@ -15,7 +15,7 @@
     rustup
     fd
     fish-lsp
-    nixd
+    nil
     gopls
     kotlin-language-server
     pyright
