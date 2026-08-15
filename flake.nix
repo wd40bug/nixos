@@ -38,7 +38,7 @@
             ./hosts/madrid
           ];
         };
-        seville = ./hosts/seville {inherit nixpkgs home-manager;};
+        seville = import ./hosts/seville {inherit nixpkgs home-manager;};
       };
     };
 }
