@@ -1,10 +1,20 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
 
-  imports = [./hardware-configuration.nix];
-  
-  options.hostConfig = lib.mkOption{
+  imports = [
+    ./hardware-configuration.nix
+    ./../../modules/gnome.nix
+    ./../../modules/xserver.nix
+  ];
+
+  options.hostConfig = lib.mkOption {
     type = lib.types.attrsOf lib.types.anything;
-    default = {};
+    default = { };
     description = "Custom host metadata passed to Home Manager";
   };
 
@@ -18,27 +28,20 @@
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
-    services.xserver.enable = true;
-    services.displayManager.gdm.enable = true;
-    services.desktopManager.gnome.enable = true;
-
-    environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs epiphany gnome-maps gnome-console ];
-
     environment.systemPackages = [
-      (lib.hiPrio (pkgs.runCommand "nvim.desktop-hide" { } ''
-        mkdir -p "$out/share/applications"
-        cat "${config.programs.neovim.finalPackage}/share/applications/nvim.desktop" > "$out/share/applications/nvim.desktop"
-        echo "Hidden=1" >> "$out/share/applications/nvim.desktop"
-      ''))
+      (lib.hiPrio (
+        pkgs.runCommand "nvim.desktop-hide" { } ''
+          mkdir -p "$out/share/applications"
+          cat "${config.programs.neovim.finalPackage}/share/applications/nvim.desktop" > "$out/share/applications/nvim.desktop"
+          echo "Hidden=1" >> "$out/share/applications/nvim.desktop"
+        ''
+      ))
     ];
 
-    services.xserver.xkb = {
-      layout = "us";
-      variant = "";
+    custom = {
+      gnome = {enable = true;};
+      xserver = {enable = true;};
     };
-
-    services.xserver.excludePackages = [ pkgs.xterm ];
   };
-
 
 }
