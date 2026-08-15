@@ -72,6 +72,7 @@ in
     enable = osConfig.hostConfig.GUI;
   };
 
+  xdg.enable = true;
   xdg.configFile = {
     "nvim" = basic_conf "nvim";
     "starship.toml" = {
