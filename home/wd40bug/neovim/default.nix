@@ -1,6 +1,6 @@
 { pkgs, lib, config, ... }:
 {
-  inputs.custom.neovim.enable = lib.mkEnableOption "Enable neovim configuration";
+  options.custom.neovim.enable = lib.mkEnableOption "Enable neovim configuration";
   config = lib.mkIf config.custom.neovim.enable {
     home.packages = with pkgs; [
       lua-language-server
