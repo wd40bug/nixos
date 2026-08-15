@@ -31,18 +31,20 @@
     tree
   ];
 
-  system.activationScripts.set-path-ownership.text = ''
-    chown -R wd40bug /etc/nixos/.git
+  system.activationScripts.nixos-perms.text = ''
+    # 1. Set base ownership for the entire tree to root (user) and wheel (group)
+    chown -R root:wheel /etc/nixos
+
+    # 2. Give ownership of the home/wd40bug subdirectory to the user wd40bug
+    #    We keep 'wheel' as the group so wheel members retain the required write access.
+    chown -R wd40bug:wheel /etc/nixos/home/wd40bug
+
+    # 3. Directories: give rwx to owner/wheel, and r-x to everyone else (0775)
+    find /etc/nixos -type d -exec chmod 0775 {} +
+
+    # 4. Files: give rw- to owner/wheel, and r-- to everyone else (0664)
+    find /etc/nixos -type f -exec chmod 0664 {} +
   '';
-
-  systemd.tmpfiles.rules = [
-    "d /etc/nixos 0775 root wheel -"
-    "z /etc/nixos/modules 0775 root wheel -"
-
-    # 2. Force the custom subdirectory to be owned by wd40bug
-    "d /etc/nixos/home/wd40bug 0755 wd40bug users -"
-    "Z /etc/nixos/home/wd40bug 0755 wd40bug users -"
-  ];
 
   programs.neovim = {
     enable = true;
