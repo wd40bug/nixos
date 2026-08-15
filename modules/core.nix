@@ -26,7 +26,7 @@
 
   system.activationScripts.set-path-ownership.text = ''
     chown -R wd40bug /etc/nixos/.git
-    sudo setfacl -R -d -m u:wd40bug:rwx /etc/nixos
+    setfacl -R -d -m u:wd40bug:rwx /etc/nixos
   '';
 
   programs.neovim = {
