@@ -109,7 +109,7 @@ in
   };
 
   dconf = {
-    enable = "gnome" == osConfig.hostConfig.desktop;
+    enable = osConfig.custom.gnome.enable;
     settings = {
       "org/gnome/desktop/interface" = {
         accent-color = "blue";
