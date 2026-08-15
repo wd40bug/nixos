@@ -74,7 +74,6 @@ in
 
   xdg.enable = true;
   xdg.configFile = {
-    "nvim" = basic_conf "nvim";
     "starship.toml" = {
       source = symlink "${dotfilesConfig}/starship.toml";
     };

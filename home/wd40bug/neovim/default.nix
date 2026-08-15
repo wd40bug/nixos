@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   home.packages = with pkgs; [
     lua-language-server
@@ -21,7 +21,6 @@
     pyright
     typescript-language-server
     verible
-
   ];
 
   xdg.desktopEntries.nvim = {
@@ -31,5 +30,12 @@
     icon = "nvim";
     terminal = true;
     type = "Application";
+  };
+
+  xdg.configFile = {
+    "nvim" = {
+      source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/home/wd40bug/neovim/nvim";
+      recursive = true;
+    };
   };
 }
