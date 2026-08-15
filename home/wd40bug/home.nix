@@ -60,6 +60,15 @@ in
     "jj" = basic_conf "jj";
   };
 
+  xdg.desktopEntries.helix = {
+    name = "Helix";
+    noDisplay = true;
+    exec = "helix %F";
+    icon = "helix";
+    terminal = true;
+    type = "Application";
+  };
+
   programs.home-manager.enable = true;
   programs.bash = {
     enable = true;
