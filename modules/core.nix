@@ -22,6 +22,7 @@
     git-crypt
     gcc
     clang
+    acl
   ];
 
   system.activationScripts.set-path-ownership.text = ''
