@@ -16,8 +16,6 @@
   config = lib.mkIf config.custom.gnome.enable {
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
-
-    # environment.gnome.excludePackages = with pkgs; [ gnome-tour gnome-user-docs epiphany gnome-maps gnome-console ];
   };
 
 }

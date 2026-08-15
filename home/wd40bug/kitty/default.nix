@@ -1,4 +1,9 @@
-{config, lib, osConfig, ...}:
+{
+  config,
+  lib,
+  osConfig,
+  ...
+}:
 {
   options.custom.kitty = {
     enable = lib.mkEnableOption "Enable kitty configuration";
@@ -35,5 +40,13 @@
       bold_italic_font auto
       # END_KITTY_FONTS
     '';
+  };
+
+  config.xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      GNOME = [ "kitty.desktop" ];
+      default = [ "kitty.desktop" ];
+    };
   };
 }
