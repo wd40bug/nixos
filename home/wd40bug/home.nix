@@ -11,11 +11,13 @@ in
   imports = [
     ./neovim
     ./kitty
+    ./gnome
   ];
 
   custom = {
     neovim.enable = true;
     kitty.enable = osConfig.hostConfig.GUI;
+    gnome.enable = osConfig.custom.gnome.enable;
   };
   
   home.username = "wd40bug";
@@ -76,28 +78,5 @@ in
         email = "wd40bug@gmail.com";
       };
     };
-  };
-
-  dconf = {
-    enable = osConfig.custom.gnome.enable;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        accent-color = "blue";
-        color-scheme = "prefer-dark";
-        clock-format = "12h";
-        clock-show-weekday = true;
-      };
-      "org/gnome/desktop/input-sources" = {
-        xkb-options = [ "caps:escape" ];
-      };
-      "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings/custom0" = {
-        binding = "<Super>t";
-        command = "kitty";
-        name = "Open Kitty";
-      };
-      "org/gtk/settings/file-chooser" = {
-        clock-format = "12h";
-      };
-    }; 
   };
 }
