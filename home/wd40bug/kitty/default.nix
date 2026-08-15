@@ -1,4 +1,4 @@
-{config, lib, osConfig}:
+{config, lib, osConfig, ...}:
 {
   options.custom.kitty = {
     enable = lib.mkEnableOption "Enable kitty configuration";
