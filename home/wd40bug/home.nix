@@ -60,10 +60,10 @@ in
     "jj" = basic_conf "jj";
   };
 
-  xdg.desktopEntries.helix = {
+  xdg.desktopEntries."Helix" = {
     name = "Helix";
     noDisplay = true;
-    exec = "helix %F";
+    exec = "hx %F";
     icon = "helix";
     terminal = true;
     type = "Application";
