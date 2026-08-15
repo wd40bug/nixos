@@ -36,7 +36,7 @@
 
   systemd.tmpfiles.rules = [
     "d /etc/nixos 0775 root wheel -"
-    "Z /etc/nixos/* 0775 root wheel -"
+    "z /etc/nixos/modules 0775 root wheel -"
 
     # 2. Force the custom subdirectory to be owned by wd40bug
     "d /etc/nixos/home/wd40bug 0755 wd40bug users -"
