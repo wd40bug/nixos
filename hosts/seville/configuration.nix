@@ -10,7 +10,7 @@
     ./hardware-configuration.nix
     ./../../modules/gnome.nix
     ./../../modules/xserver.nix
-    ./../../modules/core.nix
+    ./../../modules/core
   ];
 
   config = {
