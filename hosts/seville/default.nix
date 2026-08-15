@@ -4,7 +4,7 @@ nixpkgs.lib.nixosSystem {
   modules = [
     home-manager.nixosModules.home-manager
     {
-      home-manager.userGlobalPkgs = true;
+      home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.wd40bug = ./../../home/wd40bug/home.nix;
     }
