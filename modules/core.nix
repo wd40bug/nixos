@@ -28,6 +28,7 @@
     gcc
     clang
     acl
+    tree
   ];
 
   system.activationScripts.set-path-ownership.text = ''
