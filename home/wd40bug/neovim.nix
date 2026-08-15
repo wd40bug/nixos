@@ -1,4 +1,4 @@
-{ pkgs, osConfig, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
     lua-language-server
@@ -22,12 +22,14 @@
     typescript-language-server
     verible
 
-    (lib.hiPrio (
-      pkgs.runCommand "nvim.desktop-hide" { } ''
-        mkdir -p "$out/share/applications"
-        cat "${osConfig.programs.neovim.finalPackage}/share/applications/nvim.desktop" > "$out/share/applications/nvim.desktop"
-        echo "Hidden=1" >> "$out/share/applications/nvim.desktop"
-      ''
-    ))
   ];
+
+  xdg.desktopEntries.nvim = {
+    name = "Neovim";
+    noDisplay = true;
+    exec = "nvim %F";
+    icon = "nvim";
+    terminal = true;
+    type = "Application";
+  };
 }
