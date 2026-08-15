@@ -6,19 +6,19 @@
     xdg.desktopEntries = {
       "org.gnome.Tour" = {
         name = "Tour";
-        Hidden = true;
+        noDisplay = true;
       };
       "org.gnome.Documentation" = {
         name = "Help";
-        Hidden = true;
+        noDisplay = true;
       };
       "epiphany" = {
         name = "Web";
-        Hidden = true;
+        noDisplay = true;
       };
       "org.gnome.Maps" = {
         name = "Maps";
-        Hidden = true;
+        noDisplay = true;
       };
       "org.gnome.Console" = {
         name = "Console";
