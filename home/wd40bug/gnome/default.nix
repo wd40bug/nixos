@@ -46,7 +46,14 @@
         "org/gtk/settings/file-chooser" = {
           clock-format = "12h";
         };
-        # "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings" = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
+        "org/gnome/shell" = {
+          favorite-apps = [
+            "firefox.desktop"
+            "kitty.desktop"
+            "discord.desktop"
+            "org.gnome.Nautilus.desktop"
+          ];
+        };
       };
     };
   };
