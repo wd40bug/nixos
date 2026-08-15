@@ -15,7 +15,7 @@ in
 
   custom = {
     neovim.enable = true;
-    kitty.enable = true;
+    kitty.enable = osConfig.hostConfig.GUI;
   };
   
   home.username = "wd40bug";
@@ -58,9 +58,6 @@ in
     "jj" = basic_conf "jj";
   };
 
-  home.sessionVariables = {
-  };
-
   programs.home-manager.enable = true;
   programs.bash = {
     enable = true;
@@ -101,7 +98,6 @@ in
       "org/gtk/settings/file-chooser" = {
         clock-format = "12h";
       };
-      # "org/gnome/settings-daemon/plugings/media-keys/custom-keybindings" = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
     }; 
   };
 }
