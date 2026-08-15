@@ -27,6 +27,9 @@
 
   system.activationScripts.set-path-ownership.text = ''
     chown -R wd40bug /etc/nixos/.git
+  '';
+
+  system.activationScripts.set-access-control.text = ''
     setfacl -R -d -m u:wd40bug:rwx /etc/nixos
   '';
 
