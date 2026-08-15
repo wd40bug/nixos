@@ -13,19 +13,11 @@
     ./../../modules/core.nix
   ];
 
-  options.hostConfig = lib.mkOption {
-    type = lib.types.attrsOf lib.types.anything;
-    default = { };
-    description = "Custom host metadata passed to Home Manager";
-  };
-
   config = {
     hostConfig = {
       GUI = true;
-      hostName = "Seville";
-      desktop = "gnome";
+      hostName = "seville";
     };
-    networking.hostName = "seville";
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
 
