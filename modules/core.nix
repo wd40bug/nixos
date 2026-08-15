@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
@@ -29,9 +34,10 @@
     chown -R wd40bug /etc/nixos/.git
   '';
 
-  system.activationScripts.set-access-control.text = ''
-    setfacl -R -d -m u:wd40bug:rwx /etc/nixos
-  '';
+  systemd.tmpfiles.rules = [
+    "d /etc/nixos 0775 root wheel -"
+    "z /etc/nixos/* 0664 root wheel -"
+  ];
 
   programs.neovim = {
     enable = true;
@@ -47,12 +53,18 @@
     };
   };
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   users.users.wd40bug = {
     isNormalUser = true;
     description = "William Dale";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   # Enable networking
