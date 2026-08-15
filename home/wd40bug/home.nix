@@ -41,6 +41,7 @@ in
     luarocks
     taplo
     jetbrains-mono
+    fastfetch
   ] ++ lib.optionals osConfig.hostConfig.GUI [discord];
 
   programs.firefox = {
