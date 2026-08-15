@@ -12,8 +12,16 @@
         name = "Help";
         noDisplay = true;
       };
-      "epiphany" = {
+      "org.gnome.Epiphany" = {
         name = "Web";
+        noDisplay = true;
+      };
+      "org.gnome.Music" = {
+        name = "Music";
+        noDisplay = true;
+      };
+      "org.gnome.Calendar" = {
+        name = "Calendar";
         noDisplay = true;
       };
       "org.gnome.Maps" = {
