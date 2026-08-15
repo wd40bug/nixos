@@ -9,7 +9,7 @@ basic_conf = name : {
 in
 {
   imports = [
-    ./neovim.nix
+    ./neovim
   ];
   home.username = "wd40bug";
   home.homeDirectory = "/home/wd40bug";
