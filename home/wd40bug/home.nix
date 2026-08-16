@@ -1,86 +1,73 @@
-{ config, pkgs, lib, osConfig, ... }:
-let
-dotfilesConfig = "/etc/nixos/home/wd40bug/dotfiles/dot_config";
-symlink = config.lib.file.mkOutOfStoreSymlink;
-basic_conf = name : {
-  source = symlink "${dotfilesConfig}/${name}";
-  recursive = true;
-};
-in
+{
+  config,
+  pkgs,
+  lib,
+  osConfig,
+  ...
+}:
 {
   imports = [
-    ./neovim
-    ./kitty
+    ./crush
+    ./fish
+    ./gh
     ./gnome
+    ./helix
+    ./jj
+    ./kitty
+    ./neovim
+    ./oh-my-posh
+    ./starship
     ./stylix
   ];
 
   custom = {
-    neovim.enable = true;
-    kitty.enable = osConfig.hostConfig.GUI;
+    crush.enable = true;
+    fish.enable = true;
+    gh.enable = true;
     gnome.enable = osConfig.custom.gnome.enable;
+    helix.enable = true;
+    jj.enable = true;
+    kitty.enable = osConfig.hostConfig.GUI;
+    neovim.enable = true;
+    oh-my-posh.enable = true;
+    starship.enable = true;
     stylix.enable = true;
   };
-  
+
   home.username = "wd40bug";
   home.homeDirectory = "/home/wd40bug";
 
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
-  home.packages = with pkgs;[
-    fish
-    gh
-    clang-tools
-    ripgrep
-    starship
-    starship-jj
-    jujutsu
-    zoxide
-    bat
-    helix
-    go
-    charm-freeze
-    luarocks
-    taplo
-    jetbrains-mono
-    fastfetch
-  ] ++ lib.optionals osConfig.hostConfig.GUI [discord];
+  home.packages =
+    with pkgs;
+    [
+      fish
+      gh
+      clang-tools
+      ripgrep
+      starship
+      starship-jj
+      jujutsu
+      zoxide
+      bat
+      helix
+      go
+      charm-freeze
+      luarocks
+      taplo
+      jetbrains-mono
+      fastfetch
+    ]
+    ++ lib.optionals osConfig.hostConfig.GUI [ discord ];
 
   programs.firefox = {
     enable = osConfig.hostConfig.GUI;
   };
 
   xdg.enable = true;
-  xdg.configFile = {
-    "starship.toml" = {
-      source = symlink "${dotfilesConfig}/starship.toml";
-    };
-    "starship-jj" = basic_conf "starship-jj";
-    "fish" = basic_conf "fish";
-    "gh" = basic_conf "gh";
-    "crush" = basic_conf "crush";
-    "helix" = basic_conf "helix";
-    "jj" = basic_conf "jj";
-  };
-
-  xdg.desktopEntries."Helix" = {
-    name = "Helix";
-    noDisplay = true;
-    exec = "hx %F";
-    icon = "helix";
-    terminal = true;
-    type = "Application";
-  };
 
   programs.home-manager.enable = true;
-  programs.bash = {
-    enable = true;
-    initExtra = ''
-      if [ -t 1 ]; then
-        exec fish
-      fi
-    '';
-  };
 
   programs.git = {
     enable = true;
