@@ -29,7 +29,7 @@
     jj.enable = true;
     kitty.enable = osConfig.hostConfig.GUI;
     neovim.enable = true;
-    oh-my-posh.enable = true;
+    oh-my-posh.enable = false;
     starship.enable = true;
     stylix.enable = true;
   };
