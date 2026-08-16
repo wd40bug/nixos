@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -15,12 +19,13 @@
       nixpkgs,
       nixos-wsl,
       home-manager,
+      stylix,
       ...
     }:
     {
       nixosConfigurations = {
-        madrid = import ./hosts/madrid {inherit nixpkgs nixos-wsl home-manager;};
-        seville = import ./hosts/seville {inherit nixpkgs home-manager;};
+        madrid = import ./hosts/madrid { inherit nixpkgs nixos-wsl home-manager; };
+        seville = import ./hosts/seville { inherit nixpkgs home-manager stylix; };
       };
     };
 }
