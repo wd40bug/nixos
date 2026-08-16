@@ -14,6 +14,9 @@
       polarity = "dark";
       targets = {
         gnome.enable = true;
+        fish.override = {
+          base01 = "ffffff";
+        };
       };
     };
   };
