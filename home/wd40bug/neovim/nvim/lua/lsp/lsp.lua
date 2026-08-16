@@ -259,5 +259,5 @@ vim.lsp.enable({
   "powershell_es",
   "svelte",
   "taplo",
-  "nil_ls",
+  "nixd",
 })
