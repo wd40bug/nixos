@@ -6,17 +6,6 @@
 }:
 {
   options.custom.stylix.enable = lib.mkEnableOption "Custom Stylix Setup";
-  # options.custom.stylix.wallpaper = {
-  #   link = lib.mkOption {
-  #     type = lib.types.str;
-  #     description = "Link to the wallpaper";
-  #   };
-  #   hash = lib.mkOption {
-  #     type = lib.types.str;
-  #     description = "Wallpaper Hash";
-  #     default = lib.fakeHash;
-  #   };
-  # };
 
   config = lib.mkIf config.custom.stylix.enable {
     stylix = {

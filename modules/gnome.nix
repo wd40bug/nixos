@@ -7,7 +7,6 @@
 {
 
   imports = [
-    ./stylix
   ];
 
   options.custom.gnome = {

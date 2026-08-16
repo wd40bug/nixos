@@ -8,6 +8,7 @@
 
   imports = [
     ./hardware-configuration.nix
+    ./stylix
     ./../../modules/gnome.nix
     ./../../modules/xserver.nix
     ./../../modules/core
