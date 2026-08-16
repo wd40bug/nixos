@@ -31,7 +31,7 @@
         hash = "sha256-2oKTfLP9IaKtaDLdnWu2UIKcgMlj/Hu0BddqLnW8Eps=";
       };
       targets.grub.useWallpaper = true;
-      targets.qt.platform = "qtct";
+      targets.qt.platform = lib.mkForce "qtct";
     };
   };
 }
