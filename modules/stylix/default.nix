@@ -30,6 +30,7 @@
         url = "https://wallup.net/wp-content/uploads/2018/09/28/687841-artistic-art-artwork-painting-original.jpg";
         hash = "sha256-2oKTfLP9IaKtaDLdnWu2UIKcgMlj/Hu0BddqLnW8Eps=";
       };
+      targets.grub.enable = true;
       targets.grub.useWallpaper = true;
       targets.qt.platform = lib.mkForce "qtct";
     };
