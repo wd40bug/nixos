@@ -31,7 +31,7 @@
 
     programs.fish.interactiveShellInit = ''
       # This runs after Stylix initializes, ensuring a readable contrast
-      set -g fish_color_autosuggestion 555555 --bold
+      set -g fish_color_autosuggestion ffffff --bold
     '';
   };
 }
