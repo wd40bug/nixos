@@ -31,7 +31,6 @@
         hash = "sha256-2oKTfLP9IaKtaDLdnWu2UIKcgMlj/Hu0BddqLnW8Eps=";
       };
       targets.grub.useWallpaper = true;
-      targets.firefox.profileNames = [ "default" ];
       targets.qt.platform = "qtct";
     };
   };
