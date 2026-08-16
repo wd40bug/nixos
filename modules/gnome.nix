@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 
@@ -19,7 +18,6 @@
     custom.stylix.enable = true;
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
-    environment.systemPackages = with pkgs;[ gdm-settings ];
   };
 
 }
