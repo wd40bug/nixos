@@ -15,7 +15,7 @@
       targets = {
         gnome.enable = true;
         fish.colors.override = {
-          base04 = "ffffff";
+          base03 = "697d93";
         };
       };
     };
