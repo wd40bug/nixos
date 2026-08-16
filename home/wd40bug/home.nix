@@ -12,12 +12,14 @@ in
     ./neovim
     ./kitty
     ./gnome
+    ./stylix
   ];
 
   custom = {
     neovim.enable = true;
     kitty.enable = osConfig.hostConfig.GUI;
     gnome.enable = osConfig.custom.gnome.enable;
+    stylix.enable = true;
   };
   
   home.username = "wd40bug";
