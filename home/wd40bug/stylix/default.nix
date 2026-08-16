@@ -10,7 +10,7 @@
   config = lib.mkIf config.custom.stylix.enable {
     stylix = {
       enable = true;
-      targets.firefox.profileNames = lib.optional osConfig.hostConfig.GUI [ "default" ];
+      targets.firefox.profileNames = lib.optional osConfig.hostConfig.GUI "default";
     };
   };
 }
