@@ -38,8 +38,8 @@
       enable = true;
       settings = {
         "org/gnome/desktop/interface" = {
-          accent-color = "blue";
-          color-scheme = "prefer-dark";
+          # accent-color = "blue";
+          # color-scheme = "prefer-dark";
           clock-format = "12h";
           clock-show-weekday = true;
         };
