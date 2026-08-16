@@ -13,9 +13,7 @@
       base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
       targets = {
         gnome.enable = true;
-        firefox = {
-          profiles = ["wd40bug@gmail.com"];
-        };
+        polarity = "dark";
       };
     };
   };
