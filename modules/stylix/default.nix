@@ -28,7 +28,7 @@
       #     base02-hex = "ffffff";
       #   };
       # };
-      images = pkgs.fetchurl {
+      image = pkgs.fetchurl {
         url = "https://wallup.net/wp-content/uploads/2018/09/28/687841-artistic-art-artwork-painting-original.jpg";
         hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
       };
