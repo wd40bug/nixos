@@ -21,18 +21,22 @@
     boot.loader.efi.canTouchEfiVariables = true;
 
     custom = {
-      gnome = {enable = true;};
-      xserver = {enable = true;};
+      gnome = {
+        enable = true;
+      };
+      xserver = {
+        enable = true;
+      };
     };
 
-      users.users.wd40bug = {
-    isNormalUser = true;
-    description = "William Dale";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-  };
+    users.users.wd40bug = {
+      isNormalUser = true;
+      description = "William Dale";
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
+    };
   };
 
 }
