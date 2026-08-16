@@ -10,8 +10,8 @@
   config = lib.mkIf config.custom.stylix.enable {
     stylix = {
       enable = true;
-      # base16Scheme = "${pkgs.base16-schemes}/share/themes/base16-ayu-dark.yaml";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/ayu-dark.yaml";
+      # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
     };
   };
 }
