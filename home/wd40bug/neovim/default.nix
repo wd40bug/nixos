@@ -18,6 +18,7 @@
       fd
       fish-lsp
       nixd
+      nixfmt
       gopls
       kotlin-language-server
       pyright

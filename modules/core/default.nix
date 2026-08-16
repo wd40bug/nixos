@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -65,15 +63,6 @@
     "nix-command"
     "flakes"
   ];
-
-  users.users.wd40bug = {
-    isNormalUser = true;
-    description = "William Dale";
-    extraGroups = [
-      "networkmanager"
-      "wheel"
-    ];
-  };
 
   # Enable networking
   networking.networkmanager.enable = true;

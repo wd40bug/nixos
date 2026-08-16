@@ -24,6 +24,15 @@
       gnome = {enable = true;};
       xserver = {enable = true;};
     };
+
+      users.users.wd40bug = {
+    isNormalUser = true;
+    description = "William Dale";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+  };
   };
 
 }
