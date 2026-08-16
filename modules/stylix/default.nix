@@ -28,5 +28,10 @@
       #   hash = "sha256-2oKTfLP9IaKtaDLdnWu2UIKcgMlj/Hu0BddqLnW8Eps=";
       # };
     };
+
+    programs.fish.interactiveShellInit = ''
+      # This runs after Stylix initializes, ensuring a readable contrast
+      set -g fish_color_autosuggestion 555555 --bold
+    '';
   };
 }
