@@ -6,14 +6,15 @@
       source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/home/wd40bug/helix/helix";
       recursive = true;
     };
+
+    xdg.desktopEntries."Helix" = {
+      name = "Helix";
+      noDisplay = true;
+      exec = "hx %F";
+      icon = "helix";
+      terminal = true;
+      type = "Application";
+    };
   };
 
-  xdg.desktopEntries."Helix" = {
-    name = "Helix";
-    noDisplay = true;
-    exec = "hx %F";
-    icon = "helix";
-    terminal = true;
-    type = "Application";
-  };
 }
