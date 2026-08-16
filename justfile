@@ -23,3 +23,10 @@ get-gen:
 
 next-gen:
   echo "generation $(({{gen}} + 1))"
+
+clean-pre:
+  nix-store --optimise
+  sudo nix-collect-garbage --delete-older-than 10d
+  nix-collect-garbage
+
+clean: clean-pre build-rebuild-no-commit
