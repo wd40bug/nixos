@@ -14,7 +14,7 @@
       polarity = "dark";
       targets = {
         gnome.enable = true;
-        fish.override = {
+        fish.colors.override = {
           base01 = "ffffff";
         };
       };
