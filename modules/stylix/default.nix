@@ -29,22 +29,24 @@
       # };
       targets = {
         fish.colors.override = {
-          base00-hex = "ffffff";  
-          base01-hex = "ffffff";  
-          base02-hex = "ffffff";  
-          base03-hex = "ffffff";  
-          base04-hex = "ffffff";  
-          base05-hex = "ffffff";  
-          base06-hex = "ffffff";  
-          base07-hex = "ffffff";  
-          base08-hex = "ffffff";  
-          base09-hex = "ffffff";  
-          base0A-hex = "ffffff";  
-          base0B-hex = "ffffff";  
-          base0C-hex = "ffffff";  
-          base0D-hex = "ffffff";  
-          base0E-hex = "ffffff";  
-          base0F-hex = "ffffff";  
+          withHashtag = {
+            base00-hex = "ffffff";
+            base01-hex = "ffffff";
+            base02-hex = "ffffff";
+            base03-hex = "ffffff";
+            base04-hex = "ffffff";
+            base05-hex = "ffffff";
+            base06-hex = "ffffff";
+            base07-hex = "ffffff";
+            base08-hex = "ffffff";
+            base09-hex = "ffffff";
+            base0A-hex = "ffffff";
+            base0B-hex = "ffffff";
+            base0C-hex = "ffffff";
+            base0D-hex = "ffffff";
+            base0E-hex = "ffffff";
+            base0F-hex = "ffffff";
+          };
         };
       };
     };
