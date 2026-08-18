@@ -38,16 +38,16 @@
 
     users.mutableUsers = false;
 
-    users.users.wd40bug = {
-      isNormalUser = true;
-      description = "William Dale";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-        "wireshark"
-      ];
-      hashedPassword = secrets.passwords.wd40bug;
-    };
+    # users.users.wd40bug = {
+    #   isNormalUser = true;
+    #   description = "William Dale";
+    #   extraGroups = [
+    #     "networkmanager"
+    #     "wheel"
+    #     "wireshark"
+    #   ];
+    #   hashedPassword = secrets.passwords.wd40bug;
+    # };
   };
 
 }
