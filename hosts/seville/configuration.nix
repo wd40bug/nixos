@@ -28,6 +28,7 @@
       xserver = {
         enable = true;
       };
+      wireshark.enable = true;
     };
 
     users.users.wd40bug = {
