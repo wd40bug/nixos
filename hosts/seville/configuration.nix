@@ -12,7 +12,9 @@
     ./../../modules/guiapps
   ];
 
-  config = {
+  config = let 
+    secrets = builtins.fromJSON (builtins.readFile ../../secrets/secrets.json);
+  in{
     hostConfig = {
       GUI = true;
       hostName = "seville";
@@ -44,6 +46,7 @@
         "wheel"
         "wireshark"
       ];
+      hashedPassword = secrets.passwords.wd40bug;
     };
   };
 
