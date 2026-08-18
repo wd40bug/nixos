@@ -8,13 +8,13 @@
     ./stylix
     ./../../modules/gnome.nix
     ./../../modules/xserver.nix
+    ./../../modules/secrets.nix
     ./../../modules/core
     ./../../modules/guiapps
+    ./../../home/wd40bug/user.nix
   ];
 
-  config = let 
-    secrets = builtins.fromJSON (builtins.readFile ../../secrets/secrets.json);
-  in{
+  config = {
     hostConfig = {
       GUI = true;
       hostName = "seville";
@@ -34,20 +34,12 @@
         enable = true;
         wireshark.enable = true;
       };
+      users = {
+        wd40bug.enable = true;
+      };
     };
 
     users.mutableUsers = false;
-
-    users.users.wd40bug = {
-      isNormalUser = true;
-      description = "William Dale";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-        "wireshark"
-      ];
-      hashedPassword = secrets.passwords.wd40bug;
-    };
   };
 
 }
