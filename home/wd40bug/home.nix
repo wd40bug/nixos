@@ -67,7 +67,7 @@
     enable = osConfig.hostConfig.GUI;
   };
 
-  programs.bitwarden = {
+  programs.wireshark = {
     enable = osConfig.hostConfig.GUI;
   };
 
