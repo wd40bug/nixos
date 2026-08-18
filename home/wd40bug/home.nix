@@ -62,7 +62,6 @@
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
       wireshark
-      bitwarden-desktop
     ];
 
   programs.firefox = {
