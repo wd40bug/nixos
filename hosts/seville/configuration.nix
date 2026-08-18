@@ -34,6 +34,8 @@
       };
     };
 
+    users.mutableUsers = false;
+
     users.users.wd40bug = {
       isNormalUser = true;
       description = "William Dale";
