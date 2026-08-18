@@ -13,7 +13,7 @@
   config = {
     systemPackages =
       let
-        guiappconf = config.custom.guipkgs;
+        guiappconf = config.custom.guiapps;
       in
       with pkgs;
       [
