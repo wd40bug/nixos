@@ -67,10 +67,6 @@
     enable = osConfig.hostConfig.GUI;
   };
 
-  programs.wireshark = {
-    enable = osConfig.hostConfig.GUI;
-  };
-
   xdg.enable = true;
 
   programs.home-manager.enable = true;

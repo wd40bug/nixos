@@ -9,6 +9,7 @@
     ./../../modules/gnome.nix
     ./../../modules/xserver.nix
     ./../../modules/core
+    ./../../modules/wireshark.nix
   ];
 
   config = {
