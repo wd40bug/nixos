@@ -11,7 +11,7 @@
   };
 
   config = {
-    systemPackages =
+    environment.systemPackages =
       let
         guiappconf = config.custom.guiapps;
       in
