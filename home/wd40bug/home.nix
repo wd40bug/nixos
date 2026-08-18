@@ -18,6 +18,7 @@
     ./oh-my-posh
     ./starship
     ./stylix
+    ./secrets.nix
   ];
 
   custom = {
