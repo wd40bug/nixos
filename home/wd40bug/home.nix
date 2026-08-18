@@ -59,7 +59,11 @@
       jetbrains-mono
       fastfetch
     ]
-    ++ lib.optionals osConfig.hostConfig.GUI [ discord ];
+    ++ lib.optionals osConfig.hostConfig.GUI [
+      discord
+      wireshark
+      bitwarden-desktop
+    ];
 
   programs.firefox = {
     enable = osConfig.hostConfig.GUI;
