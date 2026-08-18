@@ -61,10 +61,13 @@
     ]
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
-      wireshark
     ];
 
   programs.firefox = {
+    enable = osConfig.hostConfig.GUI;
+  };
+
+  programs.bitwarden = {
     enable = osConfig.hostConfig.GUI;
   };
 
