@@ -13,7 +13,7 @@
   config = {
     users.users.wd40bug = {
       isNormalUser = true;
-      description = "William Dale (main profile)";
+      description = "William Dale";
       extraGroups = [
         "networkManager"
         "wheel"
