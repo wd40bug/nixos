@@ -62,6 +62,7 @@
     ]
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
+      freecad
     ];
 
   programs.firefox = {
