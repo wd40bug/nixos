@@ -64,6 +64,7 @@
       discord
       freecad
       godot
+      blender
     ];
 
   programs.firefox = {
