@@ -67,6 +67,7 @@
       freecad
       godot
       blender
+      onlyoffice-desktopeditors
     ];
 
   programs.firefox = {
