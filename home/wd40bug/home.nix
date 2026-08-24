@@ -76,14 +76,4 @@
   xdg.enable = true;
 
   programs.home-manager.enable = true;
-
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "William Dale";
-        email = "wd40bug@gmail.com";
-      };
-    };
-  };
 }
