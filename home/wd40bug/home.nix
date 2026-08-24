@@ -19,6 +19,7 @@
     ./starship
     ./stylix
     ./secrets.nix
+    ./git
   ];
 
   custom = {
@@ -33,6 +34,7 @@
     oh-my-posh.enable = false;
     starship.enable = true;
     stylix.enable = true;
+    git.enable = true;
   };
 
   home.username = "wd40bug";
