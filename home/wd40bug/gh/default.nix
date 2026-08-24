@@ -13,7 +13,7 @@
     };
 
     home.sessionVariables = {
-      GH_PAT = config.custom.secrets.github.PAT;
+      GH_TOKEN = config.custom.secrets.github.PAT;
     };
   };
 }
