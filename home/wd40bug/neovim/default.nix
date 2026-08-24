@@ -14,7 +14,6 @@
       gdb
       xclip
       lua5_1
-      rustup
       fd
       fish-lsp
       nixd
