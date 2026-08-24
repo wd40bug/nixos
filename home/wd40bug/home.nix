@@ -68,6 +68,7 @@
       godot
       blender
       onlyoffice-desktopeditors
+      signal-desktop
     ];
 
   programs.firefox = {
