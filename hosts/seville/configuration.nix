@@ -41,6 +41,8 @@
     };
 
     users.mutableUsers = false;
+
+    time.timeZone = "America/Chicago";
   };
 
 }
