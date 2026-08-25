@@ -7,7 +7,7 @@
 }:
 {
   imports = [
-    ./gnome
+    ./../wd40bug/gnome
   ];
 
   custom = {
