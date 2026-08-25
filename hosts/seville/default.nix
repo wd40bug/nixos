@@ -7,7 +7,7 @@ nixpkgs.lib.nixosSystem {
       home-manager.useGlobalPkgs = true;
       home-manager.useUserPackages = true;
       home-manager.users.wd40bug = ./../../home/wd40bug/home.nix;
-      home-manager-users.gaming = ./../../home/gaming/home.nix;
+      home-manager.users.gaming = ./../../home/gaming/home.nix;
     }
     stylix.nixosModules.stylix
     ./configuration.nix
