@@ -1,4 +1,4 @@
-{config, lib}:
+{config, lib, ...}:
 {
   options.custom.steam.enable = lib.mkEnableOption "Custom Steam setup";
 
