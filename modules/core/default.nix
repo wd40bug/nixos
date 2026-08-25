@@ -28,6 +28,7 @@
     clang
     acl
     tree
+    distrobox
   ];
 
   system.activationScripts.nixos-perms.text = ''
@@ -126,5 +127,10 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
   programs.nix-ld.enable = true;
+
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+  };
 
 }
