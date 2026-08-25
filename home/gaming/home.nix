@@ -19,23 +19,16 @@
 
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
-  home.packages =
-    with pkgs;
-    [
-      jetbrains-mono
-      fastfetch
-      discord
-      signal-desktop
-      protonup
-    ];
+  home.packages = with pkgs; [
+    jetbrains-mono
+    fastfetch
+    discord
+    signal-desktop
+    protonup
+  ];
 
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATH = "\${HOME}/.steam/root/compatibilitytools.d";
-  };
-
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
   };
 
   programs.firefox = {

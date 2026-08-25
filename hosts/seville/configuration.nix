@@ -11,6 +11,7 @@
     ./../../modules/secrets.nix
     ./../../modules/core
     ./../../modules/guiapps
+    ./../../modules/steam
     ./../../home/wd40bug/user.nix
     ./../../home/gaming/user.nix
   ];
@@ -38,6 +39,10 @@
       };
       users = {
         wd40bug.enable = true;
+        gaming.enable = true;
+      };
+      steam = {
+        enable = true;
       };
     };
 
@@ -48,8 +53,6 @@
       driSupport = true;
       driSupport32Bit = true;
     };
-
-    programs.gamemode.enable = true;
 
   };
 
