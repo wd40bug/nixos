@@ -5,7 +5,7 @@
   config = lib.mkIf config.custom.steam.enable {
     programs.steam = {
       enable = true;
-      gamescopeSession = true;
+      gamescopeSession.enable = true;
     };
 
     programs.gamemode = {
