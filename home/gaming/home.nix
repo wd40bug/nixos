@@ -24,7 +24,7 @@
     fastfetch
     discord
     signal-desktop
-    protonup
+    protonup-ng
   ];
 
   home.sessionVariables = {
