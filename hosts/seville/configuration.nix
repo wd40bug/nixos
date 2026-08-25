@@ -12,6 +12,7 @@
     ./../../modules/core
     ./../../modules/guiapps
     ./../../home/wd40bug/user.nix
+    ./../../home/gaming/user.nix
   ];
 
   config = {
@@ -40,9 +41,13 @@
       };
     };
 
-    users.mutableUsers = false;
-
     time.timeZone = "America/Chicago";
+
+    hardware.opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
   };
 
 }
