@@ -48,6 +48,9 @@
       driSupport = true;
       driSupport32Bit = true;
     };
+
+    programs.gamemode.enable = true;
+
   };
 
 }
