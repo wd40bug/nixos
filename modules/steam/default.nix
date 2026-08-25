@@ -6,7 +6,6 @@
     programs.steam = {
       enable = true;
       gamescopeSession = true;
-      allowedUsers = [ "gaming" ];
     };
 
     programs.gamemode = {
