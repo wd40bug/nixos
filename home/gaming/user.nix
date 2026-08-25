@@ -1,7 +1,7 @@
 # NOTE: This is system-level not home-manager level
 {config, lib, ...}:
 {
-  options.custom.users.wd40bug = {
+  options.custom.users.gaming = {
     enable = lib.mkEnableOption "Enable gaming user";
   };
 
