@@ -73,5 +73,11 @@
         };
       };
     };
+
+    programs.gnome-shell = {
+      extensions = [
+        {package = pkgs.gnomeExtensions.burn-my-windows;}
+      ];
+    };
   };
 }
