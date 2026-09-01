@@ -19,7 +19,7 @@
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
 
-    programs.gnome-shell.extensions = [
+    services.gnome.shell.extensions = [
       pkgs.gnomeExtensions.accent-icons-theme
     ];
   };
