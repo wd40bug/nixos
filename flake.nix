@@ -26,6 +26,7 @@
       nixosConfigurations = {
         madrid = import ./hosts/madrid { inherit nixpkgs nixos-wsl home-manager; };
         seville = import ./hosts/seville { inherit nixpkgs home-manager stylix; };
+	"los-alamos" = import ./hosts/los-alamos {inherit nixpkgs home-manager stylix; };
       };
     };
 }
