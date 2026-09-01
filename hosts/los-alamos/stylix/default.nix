@@ -20,5 +20,9 @@
       targets.grub.useWallpaper = true;
       targets.qt.platform = lib.mkForce "qtct";
     };
+
+    environment.systemPackageg = with pkgs; [
+      gnomeExtensions.accent-icons-theme
+    ];
   };
 }
