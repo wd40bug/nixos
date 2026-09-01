@@ -10,8 +10,9 @@
         fi
       '';
 
-      programs.fish.enable = true;
     };
+
+    programs.fish.enable = true;
 
     xdg.configFile."fish" = {
       source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/home/wd40bug/fish/fish";
