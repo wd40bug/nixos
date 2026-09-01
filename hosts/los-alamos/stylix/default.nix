@@ -21,7 +21,7 @@
       targets.qt.platform = lib.mkForce "qtct";
     };
 
-    environment.systemPackageg = with pkgs; [
+    environment.systemPackages = with pkgs; [
       gnomeExtensions.accent-icons-theme
     ];
   };
