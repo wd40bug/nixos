@@ -1,8 +1,16 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 {
   options.custom.gnome.enable = lib.mkEnableOption "Custom GNOME configuration";
 
   config = lib.mkIf config.custom.gnome.enable {
+    gtk = {
+      enable = true;
+      iconTheme = {
+        name = "Papirus-Dark";
+        package = pkgs.papirus-icon-theme;
+      };
+    };
+
     xdg.desktopEntries = {
       "org.gnome.Tour" = {
         name = "Tour";
@@ -42,6 +50,7 @@
           # color-scheme = "prefer-dark";
           clock-format = "12h";
           clock-show-weekday = true;
+          icon-theme = "Papirus-Dark";
         };
         "org/gnome/desktop/input-sources" = {
           xkb-options = [ "caps:escape" ];
