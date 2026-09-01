@@ -19,6 +19,7 @@
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
     environment.systemPackages = with pkgs; [
+      adwaita-icon-theme
       gnomeExtensions.auto-adwaita-colors
     ];
   };
