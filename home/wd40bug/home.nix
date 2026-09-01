@@ -19,6 +19,7 @@
     ./stylix
     ./secrets.nix
     ./git
+    ./gh
   ];
 
   custom = {
