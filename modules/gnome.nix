@@ -18,9 +18,8 @@
     custom.stylix.enable = true;
     services.displayManager.gdm.enable = true;
     services.desktopManager.gnome.enable = true;
-
-    services.gnome.shell.extensions = [
-      pkgs.gnomeExtensions.accent-icons-theme
+    environment.systemPackages = with pkgs; [
+      gnomeExtensions.accent-icons-theme
     ];
   };
 
