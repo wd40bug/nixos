@@ -9,6 +9,8 @@
           exec fish
         fi
       '';
+
+      programs.fish.enable = true;
     };
 
     xdg.configFile."fish" = {

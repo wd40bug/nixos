@@ -9,7 +9,6 @@
   imports = [
     ./crush
     ./fish
-    ./gh
     ./gnome
     ./helix
     ./jj
@@ -45,16 +44,10 @@
   home.packages =
     with pkgs;
     [
-      fish
-      gh
       clang-tools
       ripgrep
-      starship
-      starship-jj
-      jujutsu
       zoxide
       bat
-      helix
       go
       charm-freeze
       luarocks

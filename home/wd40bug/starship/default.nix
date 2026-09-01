@@ -1,4 +1,9 @@
-{lib, config, ...}:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 {
   options.custom.starship.enable = lib.mkEnableOption "Enable starship configuration";
   config = lib.mkIf config.custom.starship.enable {
@@ -12,5 +17,10 @@
         recursive = true;
       };
     };
+
+    home.packages = with pkgs; [
+      starship
+      starship-jj
+    ];
   };
 }

@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, pkgs, ... }:
 {
   options.custom.helix.enable = lib.mkEnableOption "Enable helix configuration";
   config = lib.mkIf config.custom.helix.enable {
@@ -15,6 +15,8 @@
       terminal = true;
       type = "Application";
     };
+
+    home.packages = [pkgs.helix];
   };
 
 }
