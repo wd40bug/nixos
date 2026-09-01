@@ -75,6 +75,7 @@
     };
 
     programs.gnome-shell = {
+      enable = true;
       extensions = [
         {package = pkgs.gnomeExtensions.burn-my-windows;}
       ];
