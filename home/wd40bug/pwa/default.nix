@@ -15,6 +15,17 @@
       firefoxpwa
     ];
 
-    programs.firefox.nativeMessagingHosts = [pkgs.firefoxpwa];
+    nixpkgs.overlays = [
+      (final: prev: {
+        firefoxpwa = prev.firefoxpwa.overrideAttrs (oldAttrs: {
+          postInstall = (oldAttrs.postInstall or "") + ''
+            mkdir -p $out/lib/firefoxpwa
+            touch $out/lib/firefoxpwa/is-packaged-app
+          '';
+        });
+      })
+    ];
+
+    programs.firefox.nativeMessagingHosts = [ pkgs.firefoxpwa ];
   };
 }
