@@ -85,6 +85,8 @@
         {package = pkgs.gnomeExtensions.wireless-hid;}
         {package = pkgs.gnomeExtensions.clipboard-indicator;}
         {package = pkgs.gnomeExtensions.battery-time;}
+        {package = pkgs.gnomeExtensions.compiz-windows-effect;}
+        {package = pkgs.gnomeExtensions.systemd-manager-neo;}
       ];
     };
   };
