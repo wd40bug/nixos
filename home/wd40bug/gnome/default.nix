@@ -79,6 +79,14 @@
       extensions = [
         {package = pkgs.gnomeExtensions.burn-my-windows;}
         {package = pkgs.gnomeExtensions.blur-my-shell;}
+        {package = pkgs.gnomeExtensions.clown;}
+        {package = pkgs.gnomeExtensions.gsconnect;}
+        {package = pkgs.gnomeExtensions.services-systemd;}
+        {package = pkgs.gnomeExtensions.transparent-window-moving;}
+        {package = pkgs.gnomeExtensions.wobbly-windows;}
+        {package = pkgs.gnomeExtensions.wireless-hid;}
+        {package = pkgs.gnomeExtensions.clipboard-indicator;}
+        {package = pkgs.gnomeExtensions.battery-time;}
       ];
     };
   };
