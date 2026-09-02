@@ -20,6 +20,7 @@
     ./secrets.nix
     ./git
     ./gh
+    ./pwa
   ];
 
   custom = {
@@ -35,6 +36,7 @@
     starship.enable = true;
     stylix.enable = true;
     git.enable = true;
+    pwa.enable = true;
   };
 
   home.username = "wd40bug";
