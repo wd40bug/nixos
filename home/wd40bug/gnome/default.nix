@@ -82,7 +82,6 @@
         {package = pkgs.gnomeExtensions.clown;}
         {package = pkgs.gnomeExtensions.gsconnect;}
         {package = pkgs.gnomeExtensions.transparent-window-moving;}
-        {package = pkgs.gnomeExtensions.wobbly-windows;}
         {package = pkgs.gnomeExtensions.wireless-hid;}
         {package = pkgs.gnomeExtensions.clipboard-indicator;}
         {package = pkgs.gnomeExtensions.battery-time;}
