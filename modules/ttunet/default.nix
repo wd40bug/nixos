@@ -9,7 +9,7 @@
     description = "TTUnet username";
   };
 
-  config = {
+  config = lib.mkIf config.custom.ttunet.enable {
     networking.networkmanager.ensureProfiles.profiles = {
       "TTUnet" = {
         connection = {

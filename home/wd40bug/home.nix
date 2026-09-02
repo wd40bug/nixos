@@ -20,7 +20,6 @@
     ./secrets.nix
     ./git
     ./gh
-    ./ttunet
   ];
 
   custom = {
@@ -36,7 +35,6 @@
     starship.enable = true;
     stylix.enable = true;
     git.enable = true;
-    ttunet.enable = true;
   };
 
   home.username = "wd40bug";
