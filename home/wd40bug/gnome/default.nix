@@ -79,14 +79,12 @@
       extensions = [
         {package = pkgs.gnomeExtensions.burn-my-windows;}
         {package = pkgs.gnomeExtensions.blur-my-shell;}
-        {package = pkgs.gnomeExtensions.clown;}
         {package = pkgs.gnomeExtensions.gsconnect;}
         {package = pkgs.gnomeExtensions.transparent-window-moving;}
         {package = pkgs.gnomeExtensions.wireless-hid;}
         {package = pkgs.gnomeExtensions.clipboard-indicator;}
-        {package = pkgs.gnomeExtensions.battery-time;}
+        {package = pkgs.gnomeExtensions.battery-time-3;}
         {package = pkgs.gnomeExtensions.compiz-windows-effect;}
-        {package = pkgs.gnomeExtensions.systemd-manager-neo;}
       ];
     };
   };
