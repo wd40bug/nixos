@@ -18,11 +18,6 @@
       };
     };
 
-    xdg.configFile."gh" = {
-      source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/home/wd40bug/gh/gh";
-      recursive = true;
-    };
-
     home.sessionVariables = {
       GH_TOKEN = config.custom.secrets.github.PAT;
     };
