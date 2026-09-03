@@ -21,13 +21,13 @@
     programs.firefoxpwa = {
       enable = true;
       package = pkgs-unstable.firefoxpwa;
-      # profiles = {
-      #   "01M1KQHK9PAEYS7J9419CPAVVA".sites = lib.mkIf config.custom.pwa.outlook {
-      #     "01M1KQJ28CV0S3JDWZK1C3AN94" = {
-      #       manifestURL = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
-      #     };
-      #   };
-      # };
+      profiles = {
+        "01M1KQHK9PAEYS7J9419CPAVVA".sites = lib.mkIf config.custom.pwa.outlook {
+          "01M1KQJ28CV0S3JDWZK1C3AN94" = {
+            manifestURL = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
+          };
+        };
+      };
     };
   };
 }
