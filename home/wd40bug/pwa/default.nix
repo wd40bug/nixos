@@ -35,7 +35,7 @@
             manifestUrl = "https://chat.google.com/u/0/manifest.json";
             desktopEntry.icon = pkgs.fetchurl {
               url = "https://ssl.gstatic.com/dynamite/images/favicons_20260602/chat_2026_logo_favicon_no_dot_64px.png";
-              hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+              hash = "sha256-DgLjgCYkkIAT3P5WIaCR6SrNd30asp4PDeRQclsPsEo=";
             };
           };
         };
