@@ -18,7 +18,7 @@
 
     programs.firefoxpwa = {
       enable = true;
-      sites = {
+      profiles.default.sites = {
         outlook = {
           url = "outlook.cloud.microsoft";
         };
