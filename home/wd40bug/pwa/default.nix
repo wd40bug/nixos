@@ -28,7 +28,7 @@
             name = "Outlook";
             url = "https://outlook.cloud.microsoft/mail";
             manifestUrl = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
-            desktopEntry.name = "Outlook";
+            desktopEntry.enable = true;
             # desktopEntry.icon = pkgs.fetchurl {
             #   url = "https://res.public.onecdn.static.microsoft/assets/mail/pwa/v4/pngs/Outlook.48x48x32.png";
             #   hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
