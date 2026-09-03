@@ -29,7 +29,10 @@
             url = "https://outlook.cloud.microsoft/mail";
             manifestUrl = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
           };
-          desktopEntry.name = "Outlook";
+          desktopEntry.icon = pkgs.fetchurl {
+            url = "https://res.public.onecdn.static.microsoft/assets/mail/pwa/v4/pngs/Outlook.48x48x32.png";
+            hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+          };
         };
         "01M1KR8XS8ESHDP3XY0QTTTN5V".sites = lib.mkIf config.custom.pwa.chat {
           "01M1KRFMACWXRVBYD6J2QZACFE" = {
