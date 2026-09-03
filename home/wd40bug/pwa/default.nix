@@ -1,4 +1,5 @@
 {
+  pkgs,
   pkgs-unstable,
   lib,
   config,
@@ -29,7 +30,13 @@
         };
         "01M1KR8XS8ESHDP3XY0QTTTN5V".sites = lib.mkIf config.custom.pwa.chat {
           "01M1KRFMACWXRVBYD6J2QZACFE" = {
+            name = "Google Chat";
+            url = "https://chat.google.com/app/home";
             manifestURL = "https://chat.google.com/u/0/manifest.json";
+            desktopEntry.icon = pkgs.fetchurl {
+              url = "https://ssl.gstatic.com/dynamite/images/favicons_20260602/chat_2026_logo_favicon_no_dot64px.png";
+              hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+            };
           };
         };
       };
