@@ -28,7 +28,6 @@
     clang
     acl
     tree
-    distrobox
   ];
 
   system.activationScripts.nixos-perms.text = ''
