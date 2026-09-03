@@ -29,7 +29,7 @@
             url = "https://outlook.cloud.microsoft/mail";
             manifestUrl = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
           };
-          desktopEntry.enable = true;
+          desktopEntry.name = "Outlook";
         };
         "01M1KR8XS8ESHDP3XY0QTTTN5V".sites = lib.mkIf config.custom.pwa.chat {
           "01M1KRFMACWXRVBYD6J2QZACFE" = {
