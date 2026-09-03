@@ -41,6 +41,17 @@
             };
           };
         };
+        "01M1KTWTR7RXZ0WYNMQPGBKHVY".sites = {
+          "01M1KTXJCEK3Y89KRCDTK87610" = {
+            name = "NixOS Search";
+            url = "search.nixos.org";
+            manifestUrl = "";
+            desktopEntry.icon = pkgs.fetchurl {
+              url = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
+              hash = lib.fakeHash;
+            };
+          };
+        };
       };
     };
   };
