@@ -1,5 +1,5 @@
 {
-  pkgs,
+  pkgs-unstable,
   lib,
   config,
   ...
@@ -11,10 +11,10 @@
   };
 
   config = lib.mkIf config.custom.pwa.enable {
-    home.packages = with pkgs; [
-      firefoxpwa-unwrapped
+    home.packages = with pkgs-unstable; [
+      firefoxpwa
     ];
 
-    programs.firefox.nativeMessagingHosts = [ pkgs.firefoxpwa ];
+    programs.firefox.nativeMessagingHosts = [ pkgs-unstable.firefoxpwa ];
   };
 }

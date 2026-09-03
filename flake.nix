@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=26.05";
+    nixpkgs-unstable.ure = "github:nixos/nixpkgs/nixos-unstable";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -17,6 +18,7 @@
   outputs =
     {
       nixpkgs,
+      nixpkgs-unstable,
       nixos-wsl,
       home-manager,
       stylix,
@@ -25,8 +27,8 @@
     {
       nixosConfigurations = {
         madrid = import ./hosts/madrid { inherit nixpkgs nixos-wsl home-manager; };
-        seville = import ./hosts/seville { inherit nixpkgs home-manager stylix; };
-	"los-alamos" = import ./hosts/los-alamos {inherit nixpkgs home-manager stylix; };
+        seville = import ./hosts/seville { inherit nixpkgs nixpkgs-unstable home-manager stylix; };
+	"los-alamos" = import ./hosts/los-alamos {inherit nixpkgs nixpkgs-unstable home-manager stylix; };
       };
     };
 }
