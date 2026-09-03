@@ -25,6 +25,7 @@
       profiles = {
         "01M1KQHK9PAEYS7J9419CPAVVA".sites = lib.mkIf config.custom.pwa.outlook {
           "01M1KQJ28CV0S3JDWZK1C3AN94" = {
+            url = "https://outlook.cloud.microsoft/mail";
             manifestUrl = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
           };
         };

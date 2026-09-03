@@ -38,7 +38,7 @@
     git.enable = true;
     pwa.enable = true;
     pwa.chat = true;
-    pwa.outlook = false;
+    pwa.outlook = true;
   };
 
   home.username = "wd40bug";
@@ -67,6 +67,7 @@
       blender
       onlyoffice-desktopeditors
       signal-desktop
+      pkgs-unstable.bitwarden-desktop
     ];
 
   programs.firefox = {
