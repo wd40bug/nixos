@@ -26,7 +26,7 @@
             manifestUrl = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
             desktopEntry.icon = pkgs.fetchurl {
               url = "https://res.public.onecdn.static.microsoft/assets/mail/pwa/v4/pngs/Outlook.128x128x32.png";
-              hash = "sha256-ZtCZkIHDWzQ5Fa5QylKXzyZvFUmOjIRHBDCG8m3JTd4=";
+              hash = "sha256-DGaxJuGazCnlqyK3lvCvjY/mvVzG51S6Bj2JIWlsbQM=";
             };
           };
         };
