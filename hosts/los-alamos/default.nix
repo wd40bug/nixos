@@ -1,6 +1,6 @@
 {nixpkgs, nixpkgs-unstable, home-manager, stylix}:
-nixpkgs.lib.nixosSystem {
-  system = "x86_64";
+nixpkgs.lib.nixosSystem rec {
+  system = "x86_64-linux";
   modules = [
     home-manager.nixosModules.home-manager
     {
@@ -8,7 +8,7 @@ nixpkgs.lib.nixosSystem {
       home-manager.useUserPackages = true;
       home-manager.users.wd40bug = ./../../home/wd40bug/home.nix;
       home-manager.users.gaming = ./../../home/gaming/home.nix;
-      home-manager.extraSpecialArgs = {pkgs-unstable = nixpkgs-unstable;};
+      home-manager.extraSpecialArgs = {pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};};
     }
     stylix.nixosModules.stylix
     ./configuration.nix
