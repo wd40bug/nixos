@@ -12,6 +12,7 @@
     ./../../modules/core
     ./../../modules/guiapps
     ./../../modules/steam
+    ./../../modules/ttunet
     ./../../home/wd40bug/user.nix
     ./../../home/gaming/user.nix
   ];
@@ -44,6 +45,7 @@
       steam = {
         enable = true;
       };
+      ttunet.enable = true;
     };
 
     time.timeZone = "America/Chicago";
