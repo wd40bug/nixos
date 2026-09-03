@@ -1,6 +1,6 @@
 {nixpkgs, nixpkgs-unstable, home-manager, stylix}:
 nixpkgs.lib.nixosSystem rec {
-  system = "x86_64";
+  system = "x86_64-linux";
   modules = [
     home-manager.nixosModules.home-manager
     {
