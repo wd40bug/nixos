@@ -1,5 +1,4 @@
 {
-  pkgs-unstable,
   lib,
   config,
   ...
@@ -11,10 +10,19 @@
   };
 
   config = lib.mkIf config.custom.pwa.enable {
-    home.packages = with pkgs-unstable; [
-      firefoxpwa
-    ];
+    # home.packages = with pkgs-unstable; [
+    #   firefoxpwa
+    # ];
 
-    programs.firefox.nativeMessagingHosts = [ pkgs-unstable.firefoxpwa ];
+    # programs.firefox.nativeMessagingHosts = [ pkgs-unstable.firefoxpwa ];
+
+    programs.firefoxpwa = {
+      enable = true;
+      sites = {
+        outlook = {
+          url = "outlook.cloud.microsoft";
+        };
+      };
+    };
   };
 }
