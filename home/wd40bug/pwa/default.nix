@@ -48,7 +48,7 @@
             manifestUrl = "";
             desktopEntry.icon = pkgs.fetchurl {
               url = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
-              hash = lib.fakeHash;
+              hash = "sha256-UL/Eyk/e7Yrfz8uR9MZwB80a+S4HC9CjixpW8tpJMvY=";
             };
           };
         };
