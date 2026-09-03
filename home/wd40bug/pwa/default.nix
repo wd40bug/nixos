@@ -49,6 +49,19 @@
               url = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
               hash = "sha256-UL/Eyk/e7Yrfz8uR9MZwB80a+S4HC9CjixpW8tpJMvY=";
             };
+            manifest = {
+              name = "NixOS Search";
+              short_name = "NixOS Search";
+              start_url = "https://search.nixos.org";
+              display = "standalone";
+              icons = [
+                {
+                  src = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
+                  sizes = "any";
+                  type = "image/svg+xml";
+                }
+              ];
+            };
           };
         };
       };
