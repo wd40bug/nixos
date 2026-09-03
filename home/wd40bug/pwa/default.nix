@@ -18,8 +18,8 @@
 
     programs.firefoxpwa = {
       enable = true;
-      profiles.default.sites = {
-        outlook = {
+      profiles."01M1KQHK9PAEYS7J9419CPAVVA".sites = {
+        "01M1KQJ28CV0S3JDWZK1C3AN94" = {
           url = "outlook.cloud.microsoft";
         };
       };
