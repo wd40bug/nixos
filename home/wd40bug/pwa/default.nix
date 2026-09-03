@@ -42,18 +42,41 @@
           };
         };
         "01M1KTWTR7RXZ0WYNMQPGBKHVY".sites = {
-          "01M1KTXJCEK3Y89KRCDTK87610" = {
-            name = "NixOS Search";
-            url = "https://search.nixos.org";
-            desktopEntry.icon = pkgs.fetchurl {
-              url = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
-              hash = "sha256-UL/Eyk/e7Yrfz8uR9MZwB80a+S4HC9CjixpW8tpJMvY=";
+          "01M1KTXJCEK3Y89KRCDTK87610" =
+            let
+              customManifest = pkgs.writeText "nixos-search-manifest.json" (
+                builtins.toJSON {
+                  name = "NixOS Search";
+                  short_name = "NixOS Search";
+                  start_url = "https://search.nixos.org";
+                  display = "standalone";
+                  icons = [
+                    {
+                      src = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
+                      sizes = "any";
+                      type = "image/svg+xml";
+                    }
+                  ];
+                }
+              );
+
+              # Convert file contents to base64 data URI
+              manifestBase64 = builtins.readFile (
+                pkgs.runCommand "manifest-b64" { } ''
+                  echo -n "data:application/json;base64," > $out
+                  ${pkgs.coreutils}/bin/base64 -w0 ${customManifest} >> $out
+                ''
+              );
+            in
+            {
+              name = "NixOS Search";
+              url = "https://search.nixos.org";
+              manifestUrl = manifestBase64;
+              desktopEntry.icon = pkgs.fetchurl {
+                url = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
+                hash = "sha256-UL/Eyk/e7Yrfz8uR9MZwB80a+S4HC9CjixpW8tpJMvY=";
+              };
             };
-            settings = {
-              spec_version = 1;
-              display = "standalone";
-            };
-          };
         };
       };
     };
