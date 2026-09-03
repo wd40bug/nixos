@@ -27,6 +27,11 @@
             manifestURL = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
           };
         };
+        "01M1KR8XS8ESHDP3XY0QTTTN5V".sites = lib.mkIf config.custom.pwa.chat {
+          "01M1KRFMACWXRVBYD6J2QZACFE" = {
+            manifestURL = "https://chat.google.com/u/0/manifest.json";
+          };
+        };
       };
     };
   };
