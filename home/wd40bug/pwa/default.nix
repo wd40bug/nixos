@@ -45,7 +45,6 @@
           "01M1KTXJCEK3Y89KRCDTK87610" = {
             name = "NixOS Search";
             url = "https://search.nixos.org";
-            manifestUrl = "";
             desktopEntry.icon = pkgs.fetchurl {
               url = "https://search.nixos.org/images/nixos-logomark-default-gradient-none.svg";
               hash = "sha256-UL/Eyk/e7Yrfz8uR9MZwB80a+S4HC9CjixpW8tpJMvY=";
