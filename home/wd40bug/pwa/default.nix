@@ -25,16 +25,16 @@
       profiles = {
         "01M1KQHK9PAEYS7J9419CPAVVA".sites = lib.mkIf config.custom.pwa.outlook {
           "01M1KQJ28CV0S3JDWZK1C3AN94" = {
-            manifestURL = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
+            manifestUrl = "https://outlook.cloud.microsoft/mail/manifests/pwa.json?culture=en";
           };
         };
         "01M1KR8XS8ESHDP3XY0QTTTN5V".sites = lib.mkIf config.custom.pwa.chat {
           "01M1KRFMACWXRVBYD6J2QZACFE" = {
             name = "Google Chat";
             url = "https://chat.google.com/app/home";
-            manifestURL = "https://chat.google.com/u/0/manifest.json";
+            manifestUrl = "https://chat.google.com/u/0/manifest.json";
             desktopEntry.icon = pkgs.fetchurl {
-              url = "https://ssl.gstatic.com/dynamite/images/favicons_20260602/chat_2026_logo_favicon_no_dot64px.png";
+              url = "https://ssl.gstatic.com/dynamite/images/favicons_20260602/chat_2026_logo_favicon_no_dot_64px.png";
               hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
             };
           };

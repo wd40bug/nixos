@@ -37,6 +37,8 @@
     stylix.enable = true;
     git.enable = true;
     pwa.enable = true;
+    pwa.chat = true;
+    pwa.outlook = false;
   };
 
   home.username = "wd40bug";
