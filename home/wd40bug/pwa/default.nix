@@ -1,4 +1,5 @@
 {
+  pkgs-unstable,
   lib,
   config,
   ...
@@ -19,6 +20,7 @@
 
     programs.firefoxpwa = {
       enable = true;
+      package = pkgs-unstable.firefoxpwa;
       # profiles = {
       #   "01M1KQHK9PAEYS7J9419CPAVVA".sites = lib.mkIf config.custom.pwa.outlook {
       #     "01M1KQJ28CV0S3JDWZK1C3AN94" = {
