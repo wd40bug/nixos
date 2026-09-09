@@ -48,6 +48,7 @@
         enable = true;
       };
       ttunet.enable = true;
+      distrobox.enable = true;
     };
 
     time.timeZone = "America/Chicago";
