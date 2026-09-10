@@ -43,17 +43,6 @@ vim.diagnostic.config({
   }
 })
 
-
-vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
-  vim.lsp.handlers.hover,
-  { border = 'rounded' }
-)
-
-vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(
-  vim.lsp.handlers.signature_help,
-  { border = 'rounded' }
-)
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -177,13 +166,15 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.keymap.set(mode, lhs, rhs, opts)
     end
 
-    bufmap('n', 'K', vim.lsp.buf.hover, 'Hover')
+    bufmap('n', 'K', function()
+      vim.lsp.buf.hover({ border = 'rounded' })
+    end, 'Hover')
     bufmap('n', 'gd', vim.lsp.buf.definition, 'Go to definition')
     bufmap('n', 'gD', vim.lsp.buf.declaration, 'Go to declaration')
     bufmap('n', 'gi', vim.lsp.buf.implementation, 'List implementations')
     bufmap('n', 'go', vim.lsp.buf.type_definition, 'Go to type definition')
     bufmap('n', 'gr', vim.lsp.buf.references, 'List references')
-    bufmap('n', '<leader>s', vim.lsp.buf.signature_help, 'Show function signature')
+    bufmap('n', '<leader>s', function() vim.lsp.buf.signature_help({ border = 'rounded' }) end, 'Show function signature')
     bufmap('n', '<leader>r', vim.lsp.buf.rename, 'Rename')
     bufmap('n', '<leader>a', vim.lsp.buf.code_action, 'Code action')
 
@@ -251,13 +242,13 @@ end
 vim.lsp.enable(lsp_configs)
 
 vim.lsp.enable({
-  "c3lsp",
-  "csharp_ls",
-  "gopls",
-  "jsonls",
-  "kotlin_language_server",
-  "powershell_es",
-  "svelte",
-  "taplo",
-  "nixd",
+  'c3lsp',
+  'csharp_ls',
+  'gopls',
+  'jsonls',
+  'kotlin_language_server',
+  'powershell_es',
+  'svelte',
+  'taplo',
+  'nixd',
 })
