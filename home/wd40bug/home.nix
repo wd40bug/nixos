@@ -60,6 +60,7 @@
       jetbrains-mono
       fastfetch
       pixelorama
+      libresprite
     ]
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
