@@ -59,6 +59,7 @@
       taplo
       jetbrains-mono
       fastfetch
+      pixelorama
     ]
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
