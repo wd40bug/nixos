@@ -63,7 +63,7 @@
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
       freecad
-      pkgs-unsable.godot
+      pkgs-unstable.godot
       blender
       onlyoffice-desktopeditors
       signal-desktop
