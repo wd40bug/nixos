@@ -68,6 +68,7 @@
       onlyoffice-desktopeditors
       signal-desktop
       pkgs-unstable.bitwarden-desktop
+      libresprite
     ];
 
   programs.firefox = {
