@@ -51,6 +51,7 @@
       ttunet.enable = true;
       distrobox.enable = true;
       embedded.enable = true;
+      embedded.tangnano.enable = true;
     };
 
     time.timeZone = "America/Chicago";
