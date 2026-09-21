@@ -4,7 +4,7 @@
     tangnano.enable = lib.mkEnableOption "Enable Tang Nano 20k";
   };
 
-  config = lib.mkIf config.custom.embedded {
+  config = lib.mkIf config.custom.embedded.enable {
     users.groups.dialout.members = ["wd40bug"];
   };
 }
