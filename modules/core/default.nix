@@ -28,6 +28,7 @@
     clang
     acl
     tree
+    lsusb
   ];
 
   system.activationScripts.nixos-perms.text = ''
