@@ -75,6 +75,10 @@
     enable = osConfig.hostConfig.GUI;
   };
 
+  programs.chromium = {
+    enable = osConfig.hostConfig.GUI;
+  };
+
   xdg.enable = true;
 
   programs.home-manager.enable = true;
