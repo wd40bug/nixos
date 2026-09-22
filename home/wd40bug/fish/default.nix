@@ -4,12 +4,6 @@
   config = lib.mkIf config.custom.fish.enable {
     programs.bash = {
       enable = true;
-      initExtra = ''
-        if [ -t 1 ]; then
-          exec fish
-        fi
-      '';
-
     };
 
     home.packages = [pkgs.fish];
