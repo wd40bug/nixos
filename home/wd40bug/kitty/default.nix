@@ -33,6 +33,7 @@
 
       map ctrl+alt+right next_tab
       map ctrl+alt+left previous_tab
+      disable_ligatures always
       # BEGIN_KITTY_FONTS
       font_family      family="JetBrains Mono"
       bold_font        auto
