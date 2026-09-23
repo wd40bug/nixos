@@ -13,6 +13,8 @@
     ./../../modules/guiapps
     ./../../modules/steam
     ./../../modules/ttunet
+    ./../../modules/misc-user-fix.nix
+    ./../../modules/distrobox
     ./../../home/wd40bug/user.nix
     ./../../home/gaming/user.nix
   ];
@@ -46,6 +48,7 @@
         enable = true;
       };
       ttunet.enable = true;
+      distrobox.enable = true;
     };
 
     time.timeZone = "America/Chicago";
