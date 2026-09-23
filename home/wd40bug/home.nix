@@ -65,14 +65,19 @@
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
       freecad
-      godot
+      pkgs-unstable.godot
       blender
       onlyoffice-desktopeditors
       signal-desktop
       pkgs-unstable.bitwarden-desktop
+      libresprite
     ];
 
   programs.firefox = {
+    enable = osConfig.hostConfig.GUI;
+  };
+
+  programs.chromium = {
     enable = osConfig.hostConfig.GUI;
   };
 

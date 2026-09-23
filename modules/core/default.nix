@@ -28,6 +28,7 @@
     clang
     acl
     tree
+    usbutils
   ];
 
   system.activationScripts.nixos-perms.text = ''
