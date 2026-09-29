@@ -60,6 +60,10 @@
       enable = true;
     };
 
+    services.xserver.videoDrivers = [ "nvidia" ];
+
+    hardware.nvidia.modesetting.enable = true;
+
     boot.initrd.luks.devices."luks-8069a48e-907c-4e88-97ae-f023f8922786".device =
       "/dev/disk/by-uuid/8069a48e-907c-4e88-97ae-f023f8922786";
 
@@ -78,6 +82,7 @@
         };
       };
       enableAllFirmware = true;
+      graphics.enable = true;
     };
   };
 
