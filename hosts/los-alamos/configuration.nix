@@ -119,7 +119,7 @@
       };
     };
 
-    fileSystem."/mnt/games" = {
+    fileSystems."/mnt/games" = {
       device = "/dev/disk/by-uuid/a61c0b1e-e831-4173-9e49-ea6242180e9d";
       fsType = "btrfs";
       options = [
