@@ -25,6 +25,8 @@
     discord
     signal-desktop
     protonup-ng
+    supertuxkart
+    supertux
   ];
 
   home.sessionVariables = {
