@@ -17,7 +17,6 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
   environment.systemPackages = with pkgs; [
-    neovim
     curl
     wget
     just
@@ -49,6 +48,7 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    plugins = with pkgs.vimPlugins; [nvim-treesitter.withAllGrammars];
   };
 
   programs.git = {
