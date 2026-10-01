@@ -52,6 +52,7 @@
       distrobox.enable = true;
       embedded.enable = true;
       embedded.tangnano.enable = true;
+      embedded.platformio.enable = true;
     };
 
     time.timeZone = "America/Chicago";
