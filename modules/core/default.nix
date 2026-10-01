@@ -28,7 +28,8 @@
     acl
     tree
     usbutils
-    pkgs.vimPlugins.nvim-treesitter.withAllGrammars
+    gnumake
+    tree-sitter
   ];
 
   system.activationScripts.nixos-perms.text = ''
