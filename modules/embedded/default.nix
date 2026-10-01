@@ -5,6 +5,8 @@
   ...
 }:
 {
+  imports = [./platformio.nix];
+
   options.custom.embedded = {
     enable = lib.mkEnableOption "Enable Embedded Module";
     tangnano.enable = lib.mkEnableOption "Enable Tang Nano 20k";
