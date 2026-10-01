@@ -28,6 +28,7 @@
     acl
     tree
     usbutils
+    pkgs.vimPlugins.nvim-treesitter.withAllGrammars
   ];
 
   system.activationScripts.nixos-perms.text = ''
@@ -49,7 +50,6 @@
     enable = true;
     defaultEditor = true;
     extraPackages = [
-      (pkgs.vimPlugins.nvim-treesitter.withAllGrammars)
     ];
   };
 
