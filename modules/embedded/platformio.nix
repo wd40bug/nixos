@@ -8,7 +8,7 @@
     ];
 
     services.udev.packages = [
-      pkgs.platformio-core
+      pkgs.platformio-core.udev
       pkgs.openocd
     ];
   };
