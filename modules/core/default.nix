@@ -48,11 +48,6 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    configure = {
-      packages.myPlugins = {
-        start = with pkgs.vimPlugins; [ nvim-treesitter.withAllGrammars ];
-      };
-    };
   };
 
   programs.git = {
