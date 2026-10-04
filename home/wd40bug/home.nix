@@ -71,6 +71,7 @@
       signal-desktop
       pkgs-unstable.bitwarden-desktop
       libresprite
+      drawio
     ];
 
   programs.firefox = {
