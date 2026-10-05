@@ -17,7 +17,6 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 
   environment.systemPackages = with pkgs; [
-    neovim
     curl
     wget
     just
@@ -29,6 +28,8 @@
     acl
     tree
     usbutils
+    gnumake
+    tree-sitter
   ];
 
   system.activationScripts.nixos-perms.text = ''

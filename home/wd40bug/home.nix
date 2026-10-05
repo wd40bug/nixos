@@ -60,6 +60,7 @@
       jetbrains-mono
       fastfetch
       pixelorama
+      libresprite
     ]
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
@@ -71,6 +72,7 @@
       pkgs-unstable.bitwarden-desktop
       libresprite
       orca-slicer
+      drawio
     ];
 
   programs.firefox = {
