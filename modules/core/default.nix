@@ -30,6 +30,7 @@
     usbutils
     gnumake
     tree-sitter
+    wine
   ];
 
   system.activationScripts.nixos-perms.text = ''
