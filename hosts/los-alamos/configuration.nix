@@ -1,5 +1,6 @@
 {
-  config, ...
+  config,
+  ...
 }:
 {
 
@@ -90,7 +91,7 @@
 
       # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
       # Enable this if you have graphical corruption issues or application crashes after waking
-      # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+      # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
       # of just the bare essentials.
       powerManagement.enable = false;
 
@@ -100,9 +101,9 @@
 
       # Use the NVidia open source kernel module (not to be confused with the
       # independent third-party "nouveau" open source driver).
-      # Support is limited to the Turing and later architectures. Full list of 
-      # supported GPUs is at: 
-      # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+      # Support is limited to the Turing and later architectures. Full list of
+      # supported GPUs is at:
+      # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
       # Only available from driver 515.43.04+
       open = true;
 
@@ -114,14 +115,14 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
 
       prime = {
-      	intelBusId = "PCI:0:2:0";
-	nvidiaBusId = "PCI:1:0:0";
-	sync.enable = true;
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+        sync.enable = true;
       };
     };
 
     fileSystems."/mnt/games" = {
-      device = "/dev/disk/by-uuid/a61c0b1e-e831-4173-9e49-ea6242180e9d";
+      device = "/dev/disk/by-uuid/d3024c06-8ad3-4e62-bb21-e727f07959be";
       fsType = "btrfs";
       options = [
         "defaults"
