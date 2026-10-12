@@ -7,7 +7,6 @@
     '';
 
     environment.systemPackages = with pkgs;[
-      kingstvis
       pulseview
       sigrok-cli
     ];
