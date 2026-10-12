@@ -5,7 +5,7 @@
   ...
 }:
 {
-  imports = [./platformio.nix];
+  imports = [./platformio.nix ./kingst.nix];
 
   options.custom.embedded = {
     enable = lib.mkEnableOption "Enable Embedded Module";
