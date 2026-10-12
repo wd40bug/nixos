@@ -53,6 +53,7 @@
       embedded.enable = true;
       embedded.tangnano.enable = true;
       embedded.platformio.enable = true;
+      embedded.kingst.enable = true;
     };
 
     time.timeZone = "America/Chicago";
