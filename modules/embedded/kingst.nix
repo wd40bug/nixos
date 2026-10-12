@@ -1,4 +1,4 @@
-{config, pkgs, lib}: {
+{config, pkgs, lib, ...}: {
   options.custom.embedded.kingst.enable = lib.mkEnableOption "Kingst Embedded";
 
   config = lib.mkIf config.custom.embedded.kingst.enable {
