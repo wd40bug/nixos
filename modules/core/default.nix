@@ -31,6 +31,7 @@
     gnumake
     tree-sitter
     wine
+    linuxPackages.usbip
   ];
 
   system.activationScripts.nixos-perms.text = ''
