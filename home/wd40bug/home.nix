@@ -61,7 +61,6 @@
       fastfetch
       pixelorama
       libresprite
-      dd
     ]
     ++ lib.optionals osConfig.hostConfig.GUI [
       discord
