@@ -68,6 +68,8 @@
     "flakes"
   ];
 
+  boot.kernelModules = [ "vhci-hcd" ];
+
   # Enable networking
   networking.networkmanager.enable = true;
 
