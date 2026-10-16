@@ -140,6 +140,6 @@
       options iwlwifi amsdu_size=3
     '';
 
-    hardware.wirelessRegulatoryDomain = "US";
+    services.wireless-regdb.domain = "US";
   };
 }
