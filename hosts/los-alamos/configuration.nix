@@ -133,5 +133,11 @@
         "noatime"
       ];
     };
+
+    boot.extraModprobeConfig = ''
+      options iwlwifi power_save=0
+      options iwmvm power_scheme=1
+      options iwlwifi amsdu_size=3
+    '';
   };
 }
