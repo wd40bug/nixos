@@ -139,7 +139,5 @@
       options iwmvm power_scheme=1
       options iwlwifi amsdu_size=3
     '';
-
-    hardware.wirelessRegulatoryDatabase = true;
   };
 }
