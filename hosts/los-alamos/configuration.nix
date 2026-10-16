@@ -140,9 +140,5 @@
       options iwlwifi amsdu_size=3
       options iwlwifi disable_11ax=0
     '';
-
-    networking.wireless.extraConfig = ''
-      country=US
-    '';
   };
 }
