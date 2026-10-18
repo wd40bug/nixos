@@ -134,7 +134,7 @@
       ];
     };
 
-    fileSystems."/mnt/games2/" = {
+    fileSystems."/mnt/games2" = {
       device = "/dev/disk/by-uuid/56ffa234-2af4-4316-a097-f854ce531e64";
       fsType = "btrfs";
       options = [
