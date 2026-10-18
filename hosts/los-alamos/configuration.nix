@@ -134,6 +134,18 @@
       ];
     };
 
+    fileSystems."/mnt/games2/" = {
+      device = "/dev/disk/by-uuid/56ffa234-2af4-4316-a097-f854ce531e64";
+      fsType = "btrfs";
+      options = [
+        "defaults"
+        "nofail"
+        "clear_cache"
+        "compress=zstd"
+        "noatime"
+      ];
+    };
+
     boot.extraModprobeConfig = ''
       options iwlwifi power_save=0
       options iwmvm power_scheme=1
