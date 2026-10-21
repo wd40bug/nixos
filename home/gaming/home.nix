@@ -27,6 +27,7 @@
     protonup-ng
     supertuxkart
     supertux
+    kitty
   ];
 
   home.sessionVariables = {
