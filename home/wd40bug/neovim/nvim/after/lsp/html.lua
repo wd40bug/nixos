@@ -1,5 +1,5 @@
 return {
-  cmd = { 'html-languageserver', '--stdio' },
+  cmd = { 'vscode-html-language-server', '--stdio' },
   init_options = {
     configurationSection = { 'html', 'css', 'javascript' },
     embeddedLanguages = {

@@ -23,6 +23,7 @@
       pyright
       typescript-language-server
       verible
+      vscode-langservers-extracted
     ];
 
     xdg.desktopEntries.nvim = {
