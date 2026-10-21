@@ -73,6 +73,8 @@
       libresprite
       orca-slicer
       drawio
+      kicad
+      kingstvis
     ];
 
   programs.firefox = {
